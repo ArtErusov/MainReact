@@ -1,0 +1,21 @@
+@import './reset.css';
+
+:root{
+    --black: #393939;
+    --white: #FFFFFF;
+    --blue-light: #F3F6FD;
+    --blue-medium: #B8B8FF;
+    --blue: #5051F9;
+ }
+
+* {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;  
+ }
+
+ .container{ 
+   max-width: 1260px;
+   margin: 0 auto;
+ } 
