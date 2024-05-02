@@ -1,0 +1,22 @@
+@import '../assets/css/main.css';
+
+.grid{
+ display: grid;
+ grid-template-columns: repeat(6, 273px);
+ gap: 40px;
+ margin-left: 40px;
+}
+
+.grid1{
+grid-column: span 3;
+}
+
+.grid2{
+    background-color: rgb(17, 28, 28);
+}
+.grid3{
+    background-color: aqua;
+}
+.grid4{
+    background-color: rgb(48, 84, 84);
+}
