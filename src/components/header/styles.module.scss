@@ -1,0 +1,25 @@
+@import '../../assets/css/main.css';
+
+
+
+.list{
+    width: 1920px;
+    height: 54px;
+    background-color:var(--blue-light);
+    display: flex;
+
+    &__item{
+        padding:17px 22px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--blue-medium);
+            color: var(--white);
+        }
+
+        &_active{
+            background-color: var(--blue);
+            color: var(--white);
+        }
+    }
+}
