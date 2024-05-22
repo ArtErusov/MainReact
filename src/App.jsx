@@ -1,12 +1,13 @@
 import { Fragment } from "react"
 import "./assets/css/main.css"
 import Header from "./components/header/Header"
-import MiniApp from "./pages/miniApp"
+import MiniApp from "./pages/miniApp/miniApp"
+import Course from "./pages/course/course"
 
 function App() {
 return <Fragment>
-  <Header />
-  <MiniApp />
+  <Header/>
+  <Course/>
 </Fragment>
 }
 
