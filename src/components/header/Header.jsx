@@ -11,7 +11,8 @@ const Header = () => {
                <li className={styles.list__item}>Yandex</li>
                <li className={styles.list__item}>Переделки с JS</li>
                <li className={styles.list__item}>Ui элементы</li>
-               <li className={styles.list__item + ' ' + styles.list__item_active}>Курсы</li>
+               <li className={styles.list__item + ' ' + styles.list__item_active}>Ultimate React</li>
+               <li className={styles.list__item}>Курсы</li>
             </ul>
          </div>
       </Fragment>
