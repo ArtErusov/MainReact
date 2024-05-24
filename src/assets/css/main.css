@@ -6,11 +6,13 @@
   --blue-light: #f3f6fd;
   --blue-medium: #b8b8ff;
   --blue: #5051f9;
+  --yellow: #F2EFDD;
+  --yellow-rich: #EABA4C;
 }
 
 * {
   color: var(--black);
   font-size: 18px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }

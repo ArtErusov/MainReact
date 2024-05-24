@@ -1,16 +1,68 @@
 @import '../../../../assets/css/main.css';
 
 .mainContainer {
-  width: 1526px;
-  height: 366px;
+  width: 1370px;
+  height: 730px;
   border-top: 2px solid var(--blue-light);
   border-right: 2px solid var(--blue-light);
   border-left: 2px solid var(--blue-light);
   border-radius: 14px 14px 0 0;
+  background-color: var(--yellow);
+
+  h2 {
+    color: var(--yellow-rich);
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    margin: 21px;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      top: 24px;
+      position: absolute;
+      border-radius: 10px;
+      width: 77px;
+      height: 6px;
+      background-color: var(--yellow-rich);
+    }
+
+    &::after {
+      left: 300px;
+    }
+
+    &::before {
+      right: 300px;
+    }
+  }
+  p {
+    font-size: 30px;
+    font-weight: 600;
+    width: 1068px;
+    margin: auto;
+    text-align: center;
+
+    &:last-child {
+      margin-top: 33px;
+      color: red;
+    }
+  }
+
+  button {
+    width: 250px;
+    height: 54px;
+    margin-top: 33px;
+    background-color: var(--yellow-rich);
+    border-radius: 14px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
 
 .extraContainer {
-  width: 1526px;
+  width: 1370px;
   height: 54px;
   background-color: var(--blue-light);
   border-radius: 0 0 14px 14px;
