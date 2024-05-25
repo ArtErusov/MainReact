@@ -51,24 +51,22 @@ const PizzaProject = () => {
     <Fragment>
       <div className={styles.mainContainer}>
         <h2>fast react pizza co.</h2>
-        <p>Aauthentic Italian cuisine. 6 creative dishes to choose from. All from our stone oven, all organic, all delicious.</p>
-        
+        <p className={styles.mainContainer__text}>Aauthentic Italian cuisine. 6 creative dishes to choose from. All from our stone oven, all organic, all delicious.</p>
+
         <ul className={styles.card}>
           {pizzaData.map((item) => (
-          <li className={styles.card__item} key={item.name}>
-            <img className={styles.card__item_img} src={item.photoName} alt="" />
-            <p className={styles.card__item_title}>{item.name}</p>
-            <p className={styles.card__item_description}>{item.ingredients}</p>
-            <p className={styles.card__item_price}>Price: {item.price} $</p>
-            
+            <li className={styles.card__item} key={item.name}>
+              <img className={styles.card__item_img} src={item.photoName} alt="" />
+              <div className={styles.card__item_flex}>
+                <p className={styles.card__item_flex_title}>{item.name}</p>
+                <p className={styles.card__item_flex_description}>{item.ingredients}</p>
+                <p className={styles.card__item_flex_price}>Price: {item.price} $</p>
+              </div>
+            </li>
+          ))}
+        </ul>
 
-            
-          </li> 
-        ))}
-          </ul>
-
-        
-        <p className={styles.mainContainer__lastChild}>We`re open from 12:00 to 22:00. come visit us or order online.</p>
+        <p className={styles.mainContainer__text + ' ' + styles.mainContainer__text_lastChild}>We`re open from 12:00 to 22:00. come visit us or order online.</p>
         <button>Order</button>
       </div>
       <div className={styles.extraContainer}>
