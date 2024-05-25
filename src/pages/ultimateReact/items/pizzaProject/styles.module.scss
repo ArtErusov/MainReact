@@ -42,13 +42,10 @@
     width: 1068px;
     margin: auto;
     text-align: center;
-
-    &:last-child {
-      margin-top: 33px;
-      color: red;
-    }
   }
-
+  &__lastChild {
+    padding-top: 33px;
+  }
   button {
     width: 250px;
     height: 54px;
@@ -61,6 +58,17 @@
   }
 }
 
+.card{
+  &__item{
+    &_img{
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+
+// ----------низ карточки----------------
 .extraContainer {
   width: 1370px;
   height: 54px;
