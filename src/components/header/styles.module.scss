@@ -18,6 +18,9 @@
     &_active {
       background-color: var(--blue);
       color: var(--white);
+      &:hover {
+        background-color: var(--yellow-rich);
+      }
     }
   }
 }

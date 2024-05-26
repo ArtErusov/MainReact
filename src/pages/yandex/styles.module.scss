@@ -1,0 +1,22 @@
+@import '../../assets/css/main.css';
+.title{
+    margin-top: 10px;
+    text-align: center;
+    a{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        &:hover{
+            color: var(--yellow-rich);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+        }
+    }
+}
+
+.divider{
+    width: 1920px;
+    height: 2px;
+    background-color: var(--blue-light);
+    margin-top: 10px;
+}
