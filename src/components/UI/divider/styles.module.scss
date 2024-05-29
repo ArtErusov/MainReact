@@ -1,26 +1,19 @@
 @import '../../../assets/css/main.css';
 
-.list {
+.stripe{
   width: 100%;
-  height: 54px;
+  height: 2px;
   background-color: var(--blue-light);
-  display: flex;
+  margin-bottom: 10px;
 
-  &__item {
-    padding: 17px 22px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--blue-medium);
-      color: var(--white);
-    }
-
-    &_active {
-      background-color: var(--blue);
-      color: var(--white);
-      &:hover {
-        background-color: var(--yellow-rich);
-      }
-    }
+  &__bottom{
+    width: 100%;
+  height: 2px;
+  background-color: var(--blue-light);
+  margin-top: 10px;
   }
+}
+
+p{
+  text-align: center;
 }
