@@ -1,6 +1,17 @@
 @import '../../assets/css/main.css';
 
-.grid_temporarily {
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 117px);
+  gap: 40px;
   margin-top: 40px;
   margin-left: 40px;
+  &__column{
+    &_one{
+      grid-column: 1 / 9;
+    }
+    &_two{
+      grid-column: 10 / 12;
+    }
+  }
 }

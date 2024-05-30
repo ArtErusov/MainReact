@@ -49,7 +49,7 @@ const PizzaProject = () => {
 
   const nowTime = new Date().getHours();
   const openTime = `Were open from 12:00 to 22:00. ${nowTime >= 12 && nowTime <= 15 ? 'Come visit us or order online' : 'Sorry we`re closed'} `;
-  console.log(openTime)
+  console.log(openTime);
   return (
     <Fragment>
       <div className={styles.mainContainer}>

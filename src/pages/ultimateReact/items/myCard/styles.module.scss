@@ -1,0 +1,29 @@
+@import '../../../../assets/css/main.css';
+
+.mainContainer {
+  width: 430px;
+  height: 730px;
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+  img{
+    width: 426px;
+    height: 271px;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+// ----------низ карточки----------------
+.extraContainer {
+  width: 430px;
+  height: 54px;
+  background-color: var(--blue-light);
+  border-radius: 0 0 14px 14px;
+
+  p {
+    color: var(--black);
+    padding-top: 18px;
+    margin-left: 18px;
+  }
+}
