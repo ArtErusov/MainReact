@@ -4,9 +4,7 @@ import './assets/css/main.css';
 import Header from './components/header/Header';
 import UltimateReact from './pages/ultimateReact/ultimateReact';
 import Yandex from './pages/yandex/miniApp';
-
-// import MiniApp from "./pages/miniApp/miniApp"
-// import Course from "./pages/course/course"
+import Game from './pages/game/miniApp';
 
 function App() {
   return (
@@ -15,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/ultimatereact" element={<UltimateReact />} />
         <Route path="/yandex" element={<Yandex />} />
-        {/* <Course/> */}
+        <Route path="/game" element={<Game />} />
       </Routes>
     </Fragment>
   );

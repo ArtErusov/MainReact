@@ -1,24 +1,22 @@
 import { Link } from 'react-router-dom';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import styles from './styles.module.scss';
 
-
 const Header = () => {
+  const [activeIndex, setActiveIndex] = useState();
   return (
     <Fragment>
       <div className={styles.header}>
         <ul className={styles.list}>
-          <li className={styles.list__item}>
+          <li onClick={() => setActiveIndex(0)} className={activeIndex == 0 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173/yandex">Yandex</Link>
           </li>
-          <li className={styles.list__item + ' ' + styles.list__item_active}>
+          <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173/ultimatereact">Ultimate React</Link>
           </li>
-          {/* <li className={styles.list__item}>Переделки с JS</li> */}
-          {/* <li className={styles.list__item}>Ui элементы</li> */}
-          {/* <li className={styles.list__item}>Мини задачи</li> */}
-          {/* <li className={styles.list__item}>Toolkit</li> */}
-          {/* <li className={styles.list__item}>Курсы</li> */}
+          <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+            <Link to="http://localhost:5173/game">Игры</Link>
+            </li>
         </ul>
       </div>
     </Fragment>
