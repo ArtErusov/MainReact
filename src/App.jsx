@@ -5,12 +5,14 @@ import Header from './components/header/Header';
 import UltimateReact from './pages/ultimateReact/ultimateReact';
 import Yandex from './pages/yandex/miniApp';
 import Game from './pages/game/miniApp';
+import InitialStub from './components/initialStub/initialStub';
 
 function App() {
   return (
     <Fragment>
       <Header />
       <Routes>
+        <Route path='' element={<InitialStub/> }/>
         <Route path="/ultimatereact" element={<UltimateReact />} />
         <Route path="/yandex" element={<Yandex />} />
         <Route path="/game" element={<Game />} />

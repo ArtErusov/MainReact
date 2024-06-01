@@ -1,0 +1,32 @@
+@import '../../assets/css/main.css';
+
+.container {
+  margin: auto;
+
+  &__div {
+    &_top {
+      width: 670px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--black);
+    }
+    &_bot {
+      width: 670px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--black);
+    }
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    width: 618px;
+    margin: 40px 30px;
+    text-align: center;
+  }
+
+  button {
+    width: 387px;
+    height: 42px;
+  }
+}
