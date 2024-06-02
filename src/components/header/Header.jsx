@@ -16,7 +16,13 @@ const Header = () => {
           </li>
           <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173/game">Игры</Link>
-            </li>
+          </li>
+          <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+            <Link to="http://localhost:5173">Разное на React</Link>
+          </li>
+          <li onClick={() => setActiveIndex(4)} className={activeIndex == 4 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+            <Link to="http://localhost:5173">Игры</Link>
+          </li>
         </ul>
       </div>
     </Fragment>

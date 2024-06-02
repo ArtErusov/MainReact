@@ -1,8 +1,11 @@
 @import '../../assets/css/main.css';
 
 .container {
-  margin: auto;
-
+  // временное выравнивание
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
   &__div {
     &_top {
       width: 670px;
@@ -26,7 +29,15 @@
   }
 
   button {
+    margin-top: 34px;
     width: 387px;
     height: 42px;
+    transition: 1s;
+    margin-left: 141px;
+
+    &:hover {
+      background-color: var(--black);
+      color: #fff;
+    }
   }
 }
