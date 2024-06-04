@@ -1,6 +1,6 @@
 @import '../../../../assets/css/main.css';
 
-.mainContainer {
+.card {
   width: 430px;
   height: 730px;
   border-top: 2px solid var(--blue-light);
@@ -12,10 +12,35 @@
     height: 271px;
     border-radius: 12px 12px 0 0;
   }
+
+  &__title {
+    margin-top: 38px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  &__text {
+    margin: 40px 40px 0;
+  }
+
+  &__skill {
+    display: flex;
+    margin: 40px;
+    width: 348px;
+    &_item {
+      padding: 4px 8px;
+      border-radius: 8px;
+      margin-left: 10px;
+      p {
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
 }
 
 // ----------низ карточки----------------
-.extraContainer {
+.extraCard {
   width: 430px;
   height: 54px;
   background-color: var(--blue-light);
