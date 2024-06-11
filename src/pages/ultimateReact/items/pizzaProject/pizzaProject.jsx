@@ -48,7 +48,8 @@ const PizzaProject = () => {
   ];
 
   const nowTime = new Date().getHours();
-  const openTime = `Were open from 12:00 to 22:00. ${nowTime >= 12 && nowTime <= 15 ? 'Come visit us or order online' : 'Sorry we`re closed'} `;
+  const checkOpenTime = nowTime >= 12 && nowTime <= 22;
+  const openTime = `Were open from 12:00 to 22:00. ${checkOpenTime ? 'Come visit us or order online' : 'Sorry we`re closed'} `;
   console.log(openTime);
   return (
     <Fragment>
@@ -70,7 +71,7 @@ const PizzaProject = () => {
         </ul>
 
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
-        <button>Order</button>
+        <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
       <div className={styles.extraContainer}>
         <p>Pizza Project</p>

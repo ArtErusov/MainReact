@@ -52,15 +52,29 @@
       text-align: center;
     }
   }
-  button {
-    width: 250px;
+  &__but {
+    min-width: 250px;
     height: 54px;
     margin-top: 33px;
     background-color: var(--yellow-rich);
     border-radius: 14px;
     position: relative;
     left: 50%;
+    padding: 0 20px;
     transform: translate(-50%, 0);
+  }
+
+  &__butGray{
+    min-width: 250px;
+    height: 54px;
+    margin-top: 33px;
+    background-color: var(--blue-light);
+    border-radius: 14px;
+    position: relative;
+    left: 50%;
+    padding: 0 20px;
+    transform: translate(-50%, 0);
+    pointer-events: none;
   }
 }
 
