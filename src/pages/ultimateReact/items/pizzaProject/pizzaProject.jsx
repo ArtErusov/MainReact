@@ -1,7 +1,10 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-
+import ready from '/img/svg/ready.svg';
+import revision from '/img/svg/revision.svg';
+//элемент готов
 const PizzaProject = () => {
+  // убрать файлы в Json
   const pizzaData = [
     {
       name: 'Focaccia',
@@ -50,7 +53,7 @@ const PizzaProject = () => {
   const nowTime = new Date().getHours();
   const checkOpenTime = nowTime >= 12 && nowTime <= 22;
   const openTime = `Were open from 12:00 to 22:00. ${checkOpenTime ? 'Come visit us or order online' : 'Sorry we`re closed'} `;
-  console.log(openTime);
+
   return (
     <Fragment>
       <div className={styles.mainContainer}>
@@ -60,11 +63,11 @@ const PizzaProject = () => {
         <ul className={styles.card}>
           {pizzaData.map((item) => (
             <li className={styles.card__item} key={item.name}>
-              <img className={styles.card__item_img} src={item.photoName} alt="" />
+              <img className={!item.soldOut ? styles.card__item_img : styles.card__item_img_mod} src={item.photoName} alt="" />
               <div className={styles.card__item_flex}>
                 <p className={styles.card__item_flex_title}>{item.name}</p>
                 <p className={styles.card__item_flex_description}>{item.ingredients}</p>
-                <p className={styles.card__item_flex_price}>Price: {item.price} $</p>
+                {!item.soldOut ? <p className={styles.card__item_flex_price}>Price: {item.price} $</p> : <p className={styles.card__item_flex_price}>Sold out</p>}
               </div>
             </li>
           ))}
@@ -75,6 +78,10 @@ const PizzaProject = () => {
       </div>
       <div className={styles.extraContainer}>
         <p>Pizza Project</p>
+        <div>
+          <img className={styles.extraContainer__revision} src={revision} alt="" />
+          <img className={styles.extraContainer__ready} src={ready} alt="" />
+        </div>
       </div>
     </Fragment>
   );
