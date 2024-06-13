@@ -31,9 +31,15 @@
       padding: 4px 8px;
       border-radius: 8px;
       margin-left: 10px;
+      display: flex;
+      gap: 10px;
       p {
         font-size: 14px;
+        margin: 2px 0;
         color: #fff;
+      }
+      span{
+        font-size: 13px;
       }
     }
   }
@@ -45,6 +51,15 @@
   height: 54px;
   background-color: var(--blue-light);
   border-radius: 0 0 14px 14px;
+  display: flex;
+  justify-content: space-between;
+  img {
+    margin-top: 18px;
+    margin-right: 20px;
+  }
+  img:last-child {
+    margin-top: 20px;
+  }
 
   p {
     color: var(--black);

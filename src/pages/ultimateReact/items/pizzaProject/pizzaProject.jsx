@@ -79,8 +79,8 @@ const PizzaProject = () => {
       <div className={styles.extraContainer}>
         <p>Pizza Project</p>
         <div>
-          <img className={styles.extraContainer__revision} src={revision} alt="" />
-          <img className={styles.extraContainer__ready} src={ready} alt="" />
+          <img src={revision} alt="" />
+          <img src={ready} alt="" />
         </div>
       </div>
     </Fragment>
