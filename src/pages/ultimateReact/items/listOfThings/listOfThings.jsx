@@ -1,21 +1,21 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-import ready from '/img/svg/ready.svg';
-import revision from '/img/svg/revision.svg';
+import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
+
 
 const ListOfThings = () => {
+  const сomponentState ={
+    title: "list of things for trip",
+    revision: true,
+    ready: true,
+    column: 6
+  }
 
   return (
     <Fragment>
       <div className={styles.mainContainer}>
         </div>
-      <div className={styles.extraContainer}>
-        <p>Pizza Project</p>
-        <div>
-          <img src={revision} alt="" />
-          <img src={ready} alt="" />
-        </div>
-      </div>
+        <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column}/>
     </Fragment>
   );
 };
