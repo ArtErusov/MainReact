@@ -1,10 +1,69 @@
 @import '../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+  position: relative
+}
 
+.steps {
+  text-align: center;
+}
+
+
+.numbers {
+  display: flex;
+  gap: 28px;
+  margin: 22px 0 0 20px;
+  &_btn {
+    font-weight: 700;
+    color: var(--blue-medium);
+    padding: 17px 23px;
+    border: 2px solid var(--blue-medium);
+    border-radius: 14px;
+  }
+}
+.step{
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 120px;
+}
+.message{
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left:24px;
+
+  &_previos {
+    padding:  17px 23px 17px 23px;
+    color: var(--blue-medium);
+    background-color: var(--blue-light);
+    border-radius: 14px 0 0 14px;
+    &:hover{
+      background-color: var(--blue);
+      color: var(--white);
+    }
+  }
+  &_next {
+    padding: 17px 32px 17px 32px;
+    color: var(--blue-medium);
+    background-color: var(--blue-light);
+    border-radius: 0 14px 14px 0;
+    &:hover{
+      background-color: var(--blue);
+      color: var(--white);
+    }
+  }
+}
+.active{
+  background-color: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+}

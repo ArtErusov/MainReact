@@ -1,29 +1,28 @@
 @import '../../assets/css/main.css';
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: repeat(12, 117px);
   gap: 40px;
   margin-top: 40px;
   margin-left: 40px;
-  &__column{
-    // строка 1
-    &_one{
-      grid-column: 1 / 9;
-    }
-    &_two{
-      grid-column: 10 / 12;
-    }
+  &__column {
     // строка 2
-    &_three{
+    &_three {
       grid-column: 9 / 12;
     }
-    &_four{
+    &_four {
       grid-column: 7 / 9;
     }
-    &_five{
+    &_five {
       grid-column: 1 / 6;
     }
-
+    // строка 1
+    &_one {
+      grid-column: 1 / 9;
+    }
+    &_two {
+      grid-column: 10 / 12;
+    }
   }
 }
