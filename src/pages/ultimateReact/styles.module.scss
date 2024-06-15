@@ -7,11 +7,23 @@
   margin-top: 40px;
   margin-left: 40px;
   &__column{
+    // строка 1
     &_one{
       grid-column: 1 / 9;
     }
     &_two{
       grid-column: 10 / 12;
     }
+    // строка 2
+    &_three{
+      grid-column: 9 / 12;
+    }
+    &_four{
+      grid-column: 7 / 9;
+    }
+    &_five{
+      grid-column: 1 / 6;
+    }
+
   }
 }
