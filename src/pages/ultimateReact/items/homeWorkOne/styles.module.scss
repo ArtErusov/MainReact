@@ -1,10 +1,44 @@
 @import '../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+  text-align: center;
+}
 
+.counter {
+  display: flex;
+  margin-top: 10px;
+
+  button {
+    margin-left: 5px;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    border: 2px solid var(--blue-medium);
+    align-items: center;
+    color: var(--blue-medium);
+  }
+  div {
+    margin-left: 5px;
+    width: 141px;
+    height: 54px;
+    background-color: var(--blue-light);
+    color: var(--blue-medium);
+    border-radius: 14px;
+    padding-top: 17px;
+  }
+  &_date {
+    margin-top: 5px;
+    width: 259px;
+    border-radius: 14px;
+    background-color: var(--blue-light);
+    padding: 15px 0;
+    cursor: pointer;
+    p {
+      color: var(--blue-medium);
+    }
+  }
+}
