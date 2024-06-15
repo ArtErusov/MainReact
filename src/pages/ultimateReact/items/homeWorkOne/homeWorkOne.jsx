@@ -18,6 +18,7 @@ const HomeWorkOne = () => {
   const [counter, setCounter] = useState(1);
   const date = new Date();
   date.setDate(date.getDate() + step);
+  const whenDate = step === 0 ? 'Today is ' : step > 0 ? `${step} days from today is` : `${Math.abs(step)} days ago was `;
 
   return (
     <Fragment>
@@ -33,11 +34,10 @@ const HomeWorkOne = () => {
           <div>counter: {counter}</div>
           <button onClick={() => setCounter(counter - 1)}>--</button>
         </div>
-        <div onClick={() => setStep(0)} className={styles.counter_date}>
-          <p>Today is {dayOfTheWeek[date.getDay() - 1]}</p>
-          <p>
-            {date.getDate()} {months[date.getMonth()]} {date.getFullYear()}
-          </p>
+        <div
+          onClick={() => {setStep(0);setCounter(1);}}className={styles.counter_date}>
+          <p>{whenDate}{dayOfTheWeek[date.getDay() - 1]}</p>
+          <p>{date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</p>
         </div>
       </div>
       <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
