@@ -5,13 +5,26 @@
   border-right: 2px solid var(--blue-light);
   border-left: 2px solid var(--blue-light);
   border-radius: 14px 14px 0 0;
-  position: relative
-}
-
-.steps {
+  position: relative;
   text-align: center;
 }
 
+.open{
+  margin-top: 20px;
+  width: 230px;
+  border-radius: 14px;
+  height: 54px;
+  background-color: var(--blue-light);
+  color: var(--blue-medium);
+}
+.close{
+  margin-top: 20px;
+  width: 230px;
+  border-radius: 14px;
+  height: 54px;
+  background-color: var(--blue-medium);
+  color: var(--white);
+}
 
 .numbers {
   display: flex;
@@ -25,12 +38,12 @@
     border-radius: 14px;
   }
 }
-.step{
+.step {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 120px;
+  margin-top: 70px;
 }
-.message{
+.message {
   font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
@@ -39,14 +52,14 @@
 .buttons {
   position: absolute;
   bottom: 20px;
-  left:24px;
+  left: 24px;
 
   &_previos {
-    padding:  17px 23px 17px 23px;
+    padding: 17px 23px 17px 23px;
     color: var(--blue-medium);
     background-color: var(--blue-light);
     border-radius: 14px 0 0 14px;
-    &:hover{
+    &:hover {
       background-color: var(--blue);
       color: var(--white);
     }
@@ -56,13 +69,13 @@
     color: var(--blue-medium);
     background-color: var(--blue-light);
     border-radius: 0 14px 14px 0;
-    &:hover{
+    &:hover {
       background-color: var(--blue);
       color: var(--white);
     }
   }
 }
-.active{
+.active {
   background-color: var(--blue);
   color: var(--white);
   border: 2px solid var(--blue);
