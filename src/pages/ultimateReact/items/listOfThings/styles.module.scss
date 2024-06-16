@@ -1,12 +1,61 @@
 @import '../../../../assets/css/main.css';
-
-  .mainContainer {
-    width: 1370px;
-    height: 730px;
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
+// :root {
+//   --black: #393939;
+//   --white: #ffffff;
+//   --blue-light: #f3f6fd;
+//   --blue-medium: #b8b8ff;
+//   --blue: #5051f9;
+//   --yellow: #F2EFDD;
+//   --yellow-rich: #EABA4C;
+// }
+.mainContainer {
+  width: 1370px;
+  height: 730px;
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+}
+.header {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0 0 40px;
+  text-align: center;
+  &__text {
+    padding-top: 17px;
+    width: 337px;
+    height: 54px;
+    background-color: var(--blue-medium);
+    color: var(--white);
+    border-radius: 14px;
   }
-  
-
+  &__number {
+    width: 84px;
+    padding: 0 24px;
+    height: 54px;
+    border-radius: 14px;
+    border: 2px solid var(--blue-medium);
+    color: var(--blue-medium);
+    &::placeholder {
+      color: var(--blue-medium);
+    }
+  }
+  &__inpText {
+    width: 250px;
+    height: 54px;
+    border-radius: 14px;
+    border: 2px solid var(--blue-medium);
+    padding-left: 20px;
+    color: var(--blue-medium);
+    &::placeholder {
+      color: var(--blue-medium);
+    }
+  }
+  &__button {
+    width: 77px;
+    height: 54px;
+    border-radius: 14px;
+    background-color: var(--blue-medium);
+    color: var(--white);
+  }
+}

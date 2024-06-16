@@ -14,8 +14,16 @@ const ListOfThings = () => {
 
   return (
     <Fragment>
-      <div style={{height:сomponentState.height, width:сomponentState.width}} className={styles.mainContainer}></div>
-      
+      <div style={{height:сomponentState.height, width:сomponentState.width}} className={styles.mainContainer}>
+      <div className={styles.header}>
+        <div className={styles.header__text}>What do you need for your trip?</div>
+        <input type="number" className={styles.header__number} min={0} max={10} placeholder='0'/>
+        <input type="text" className={styles.header__inpText} placeholder='item.....'/>
+        <button className={styles.header__button}>add</button>
+      </div>
+      <div className={styles.main}></div>
+      <div className={styles.bottom}></div>
+      </div>
       <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
     </Fragment>
   );
