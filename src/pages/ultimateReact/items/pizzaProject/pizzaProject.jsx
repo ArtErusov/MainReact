@@ -1,10 +1,18 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-import ready from '/img/svg/ready.svg';
-import revision from '/img/svg/revision.svg';
+import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
 //элемент готов
 const PizzaProject = () => {
   // убрать файлы в Json
+  const сomponentState = {
+    title: 'React Pizza - simple rendering using map',
+    revision: 1,
+    ready: 1,
+    column: 9,
+    height: '472px',
+    width: '900px'
+  };
+
   const pizzaData = [
     {
       name: 'Focaccia',
@@ -76,13 +84,7 @@ const PizzaProject = () => {
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
-      <div className={styles.extraContainer}>
-        <p>Pizza Project</p>
-        <div>
-          <img src={revision} alt="" />
-          <img src={ready} alt="" />
-        </div>
-      </div>
+      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
     </Fragment>
   );
 };
