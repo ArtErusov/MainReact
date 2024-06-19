@@ -7,6 +7,7 @@ const PizzaProject = () => {
   const сomponentState = {
     title: 'React Pizza - simple rendering using map',
     revision: 1,
+    important: 0,
     ready: 1,
     column: 9,
     height: '472px',
@@ -84,7 +85,7 @@ const PizzaProject = () => {
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
-      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
     </Fragment>
   );
 };

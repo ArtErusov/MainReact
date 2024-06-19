@@ -4,7 +4,8 @@ import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
 
 const ListOfThings = () => {
   const сomponentState = {
-    title: 'list of things for trip',
+    title: 'list of things for trip - Работа с Input',
+    important: 1,
     revision: 0,
     ready: 0,
     column: 6,
@@ -13,7 +14,7 @@ const ListOfThings = () => {
   };
   const [description, setDescription] = useState('');
   const [quantity, setQuantitty] = useState(1);
-  const arrayItems = [];
+  // const arrayItems = [];
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!description) return;
@@ -27,7 +28,7 @@ const ListOfThings = () => {
   const createArray = Array.from({ length: 10 }, (_, i) => i + 1);
   return (
     <Fragment>
-      <div style={{ height: сomponentState.height, width: сomponentState.width }} className={styles.mainContainer}>
+      <div style={{ height: сomponentState.height, width: сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
         <form className={styles.header} onSubmit={handleSubmit}>
           <div className={styles.header__text}>What do you need for your trip?</div>
           <select 
@@ -51,7 +52,7 @@ const ListOfThings = () => {
         <div className={styles.main}></div>
         <div className={styles.bottom}></div>
       </div>
-      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
     </Fragment>
   );
 };
