@@ -52,3 +52,28 @@
     color: var(--white);
   }
 }
+
+.main{
+  margin:40px;
+  
+  // width: 810px;
+  
+  &__list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    &_item{
+      display: flex;
+      height: 54px;
+      border-radius: 14px;
+      background-color: var(--blue-light);
+      p{
+        padding-left: 20px;
+        padding-top: 16px;
+      }
+      div{
+        padding: 16px 20px;
+      }
+    }
+  }
+}

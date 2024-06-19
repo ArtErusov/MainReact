@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import { Fragment, useState } from 'react';
 import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
+import close from '/img/svg/close.svg';
 
 const ListOfThings = () => {
   const сomponentState = {
@@ -13,15 +14,25 @@ const ListOfThings = () => {
     width: '900px',
   };
   const [description, setDescription] = useState('');
-  const [quantity, setQuantitty] = useState(1);
-  // const arrayItems = [];
+  const [quantity, setQuantity] = useState(1);
+  const [items, setItems] = useState([]);
+
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!description) return;
     const newItem ={description, quantity, packed: false, id: Date.now()}
-    console.log(newItem);
+    setItems((items) => [...items, newItem]);
     setDescription('');
-    setQuantitty(1);
+    setQuantity(1);
+    console.log(items);
+  };
+
+  const handleDelete = (index) => {
+    const updatingItems = [...items];
+    updatingItems.splice(index, 1);
+    setItems(updatingItems);
   };
   
   //Создал массив с числами от 1 до 10
@@ -34,7 +45,7 @@ const ListOfThings = () => {
           <select 
             value={quantity} id="" 
             className={styles.header__number} 
-            onChange={(e) => setQuantitty(Number(e.target.value))}>
+            onChange={(e) => setQuantity(Number(e.target.value))}>
               {createArray.map((num) => (
                 <option value={num} key={num}>
                   {num}
@@ -49,7 +60,17 @@ const ListOfThings = () => {
           <button className={styles.header__button}>add</button>
         </form>
 
-        <div className={styles.main}></div>
+        <div className={styles.main}>
+          {<ui className={styles.main__list}>{items.map((item) => (
+            <li className={styles.main__list_item} key={item.id}>
+              <input type="checkbox" />
+              <p>{item.quantity}</p>
+              <p>{item.description}</p>
+              <div onClick={() => handleDelete()}><img src={close} alt=""/></div>
+              </li>
+            ))}
+            </ui>}
+        </div>
         <div className={styles.bottom}></div>
       </div>
       <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
