@@ -8,6 +8,7 @@
   border-right: 2px solid var(--blue-light);
   border-left: 2px solid var(--blue-light);
   border-radius: 14px 14px 0 0;
+  position: relative;
 }
 .header {
   display: flex;
@@ -53,27 +54,47 @@
   }
 }
 
-.main{
-  margin:40px;
-  
-  // width: 810px;
-  
-  &__list{
+.main {
+  margin: 40px;
+  &__list {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    &_item{
+    input{
+      margin-left: 20px;
+    }
+    &_item {
       display: flex;
       height: 54px;
       border-radius: 14px;
       background-color: var(--blue-light);
-      p{
+      p {
         padding-left: 20px;
         padding-top: 16px;
       }
-      div{
+      div {
         padding: 16px 20px;
       }
     }
+  }
+}
+
+.bottom {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  button {
+    height: 54px;
+    padding: 0 20px;
+    border-radius: 14px;
+    background-color: var(--blue-medium);
+    color: var(--white);
+  }
+
+  &__sort {
+    margin-right: 20px;
   }
 }

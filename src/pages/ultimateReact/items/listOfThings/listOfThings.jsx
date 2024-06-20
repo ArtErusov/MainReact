@@ -16,8 +16,11 @@ const ListOfThings = () => {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [items, setItems] = useState([]);
+  const [isChecked, setIsChecked] = useState(true);
 
-
+  const handleCheckboxChange = (event) => {
+  setIsChecked(event.target.checked);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -63,15 +66,18 @@ const ListOfThings = () => {
         <div className={styles.main}>
           {<ui className={styles.main__list}>{items.map((item) => (
             <li className={styles.main__list_item} key={item.id}>
-              <input type="checkbox" />
-              <p>{item.quantity}</p>
-              <p>{item.description}</p>
+              <input type="checkbox" onChange={handleCheckboxChange} checked={isChecked} />
+              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.quantity}</p>
+              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.description}</p>
               <div onClick={() => handleDelete()}><img src={close} alt=""/></div>
               </li>
             ))}
             </ui>}
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          <button className={styles.bottom__sort}>sort by meet order</button>
+          <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
+        </div>
       </div>
       <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
     </Fragment>
