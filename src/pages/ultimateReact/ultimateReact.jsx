@@ -6,12 +6,16 @@ import PizzaProject from './items/pizzaProject/pizzaProject';
 import ListOfThings from './items/listOfThings/listOfThings';
 import HomeWorkOne from './items/homeWorkOne/homeWorkOne';
 import ReactionToButtons from './items/reactionToButtons/reactionToButtons';
+import StateTransfer from './items/stateTransfer/stateTransfer';
 
 const UltimateReact = () => {
   return (
     <Fragment>
       {/* --------------------Строка 2-------------------- */}
       <div className={styles.grid}>
+        <div className={styles.grid__column_six}>
+          <StateTransfer />
+        </div>
         <div className={styles.grid__column_five}>
           <ListOfThings />
         </div>
@@ -19,7 +23,7 @@ const UltimateReact = () => {
           <ReactionToButtons />
         </div>
         <div className={styles.grid__column_three}>
-        <HomeWorkOne />
+          <HomeWorkOne />
         </div>
         {/* --------------------Строка 1-------------------- */}
         <div className={styles.grid__column_one}>

@@ -8,14 +8,18 @@
   margin-left: 40px;
   &__column {
     // строка 2
+
     &_three {
-      grid-column: 9 / 12;
+      grid-column: 9 / 10;
     }
     &_four {
       grid-column: 7 / 9;
     }
     &_five {
-      grid-column: 1 / 6;
+      grid-column: 1 / 5;
+    }
+    &_six {
+      grid-column: 11 / 12;
     }
     // строка 1
     &_one {
