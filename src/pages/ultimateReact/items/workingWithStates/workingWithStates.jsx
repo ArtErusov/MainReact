@@ -2,17 +2,16 @@ import styles from './styles.module.scss';
 import { Fragment } from 'react';
 import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
 
-const StateTransfer = () => {
+const WorkingWithStates = () => {
   const сomponentState = {
-    title: 'list of things for trip',
-    important: 0,
+    title: 'Props + Context',
+    important: 1,
     revision: 0,
     ready: 0,
     column: 2,
     height: '472px',
     width: '273px'
   };
-
   return (
     <Fragment>
       <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
@@ -23,5 +22,5 @@ const StateTransfer = () => {
   );
 };
 
-export default StateTransfer;
+export default WorkingWithStates;
  

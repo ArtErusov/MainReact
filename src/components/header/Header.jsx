@@ -14,15 +14,12 @@ const Header = () => {
           <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173/ultimatereact">Ultimate React</Link>
           </li>
-          <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+          {/* <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173/game">Игры</Link>
-          </li>
-          <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+          </li> */}
+          {/* <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
             <Link to="http://localhost:5173">Разное на React</Link>
-          </li>
-          <li onClick={() => setActiveIndex(4)} className={activeIndex == 4 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-            <Link to="http://localhost:5173">Игры</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </Fragment>

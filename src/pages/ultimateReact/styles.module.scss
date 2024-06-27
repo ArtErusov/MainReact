@@ -7,8 +7,12 @@
   margin-top: 40px;
   margin-left: 40px;
   &__column {
+    // контейнер 1
+    // строка 3
+    &_seven {
+      grid-column: 11 / 12;
+    }
     // строка 2
-
     &_three {
       grid-column: 9 / 10;
     }
@@ -30,3 +34,4 @@
     }
   }
 }
+
