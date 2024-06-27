@@ -22,7 +22,7 @@ const ListOfThings = () => {
   const handleCheckboxChange = (event) => {
   setIsChecked(event.target.checked);
   };
-
+//Добавление нового элемента массива 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!description) return;
@@ -30,20 +30,19 @@ const ListOfThings = () => {
     setItems((items) => [...items, newItem]);
     setDescription('');
     setQuantity(1);
-    console.log(items);
   };
-
-  const handleDelete = (index) => {
-    const updatingItems = [...items];
-    updatingItems.splice(index, 1);
-    setItems(updatingItems);
-  };
+//Удаление элемента массива 
+  const handleDelete = (itemId) => {
+    setItems(items=>items.filter(item=>item.id !==itemId))
+  }
   
   //Создал массив с числами от 1 до 10
   const createArray = Array.from({ length: 10 }, (_, i) => i + 1);
+
   return (
     <Fragment>
       <div style={{ height: сomponentState.height, width: сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
+{/* =================================================================================== */}
         <form className={styles.header} onSubmit={handleSubmit}>
           <div className={styles.header__text}>What do you need for your trip?</div>
           <select 
@@ -63,18 +62,18 @@ const ListOfThings = () => {
             value={description} placeholder="item....." />
           <button className={styles.header__button}>add</button>
         </form>
-
+ {/* ==================================================================================== */}     
         <div className={styles.main}>
           {<ui className={styles.main__list}>{items.map((item) => (
             <li className={styles.main__list_item} key={item.id}>
               <input type="checkbox" onChange={handleCheckboxChange} checked={isChecked} />
-              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.quantity}</p>
-              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.description}</p>
-              <div onClick={() => handleDelete()}><img src={close} alt=""/></div>
+              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.quantity} {item.description}</p>
+              <div onClick={() => handleDelete(item.id)}><img src={close} alt=""/></div>
               </li>
             ))}
             </ui>}
         </div>
+{/* ==================================================================================== */}  
         <div className={styles.bottom}>
           <button className={styles.bottom__sort}>sort by meet order</button>
           <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
