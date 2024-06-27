@@ -8,6 +8,7 @@ const ReactionToButtons = () => {
     revision: 0,
     ready: 1,
     column: 2,
+    componentName: 'ReactionToButtons',
     height: '472px',
     width: '273px',
   };
@@ -47,7 +48,7 @@ const ReactionToButtons = () => {
           </div>
         )}
       </div>
-      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
     </Fragment>
   );
 };

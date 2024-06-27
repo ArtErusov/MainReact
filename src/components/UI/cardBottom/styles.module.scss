@@ -1,11 +1,15 @@
 @import '../../../assets/css/main.css';
 
+
 .cardBottom {
   height: 54px;
   background-color: var(--blue-light);
   border-radius: 0 0 14px 14px;
   display: flex;
   justify-content: space-between;
+  
+  
+  
   img {
     margin-top: 18px;
     margin-right: 20px;
@@ -18,5 +22,6 @@
     color: var(--black);
     padding-top: 18px;
     padding-left: 18px;
+    cursor: pointer;
   }
 }

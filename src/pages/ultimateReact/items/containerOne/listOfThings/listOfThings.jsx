@@ -8,6 +8,7 @@ const ListOfThings = () => {
     title: 'list of things for trip - Работа с Input',
     important: 1,
     revision: 0,
+    componentName: 'ListOfThings',
     ready: 0,
     column: 6,
     height: '472px',
@@ -79,7 +80,7 @@ const ListOfThings = () => {
           <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
         </div>
       </div>
-      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom title={сomponentState.title} important={сomponentState.important}  revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
     </Fragment>
   );
 };

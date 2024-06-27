@@ -5,6 +5,7 @@ import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 const WorkingWithStates = () => {
   const сomponentState = {
     title: 'Props + Context',
+    componentName: 'WorkingWithStates',
     important: 1,
     revision: 0,
     ready: 0,
@@ -17,7 +18,7 @@ const WorkingWithStates = () => {
       <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={сomponentState.important} title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom important={сomponentState.important} title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
     </Fragment>
   );
 };

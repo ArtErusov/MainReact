@@ -1,9 +1,18 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-import ready from '/img/svg/ready.svg';
-import revision from '/img/svg/revision.svg';
+import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const MyCard = () => {
+  const сomponentState = {
+    title: 'User card',
+    revision: 1,
+    important: 0,
+    componentName: 'MyCard',
+    ready: 1,
+    column: 3,
+    height: '472px',
+    width: '900px'
+  };
   const userDescription =
     'My name is Artem, I`m 30 years old, and I`m a beginner web developer. I enjoy learning new technologies and putting them into practice. I am passionate about my work and always try to do itin the best possible way. In addition, I am a very responsible person and know how to work in a team.';
   const userSkills = [
@@ -31,13 +40,7 @@ const MyCard = () => {
           ))}
         </div>
       </div>
-      <div className={styles.extraCard}>
-        <p>User card</p>
-        <div>
-        <img src={revision} alt="" />
-        <img src={ready} alt="" />
-        </div>
-      </div>
+      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
     </Fragment>
   );
 };

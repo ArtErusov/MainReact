@@ -7,6 +7,7 @@ const HomeWorkOne = () => {
     title: 'Work home 1',
     revision: 0,
     ready: 0,
+    componentName: 'HomeWorkOne',
     column: 2,
     height: '472px',
     width: '274px',
@@ -40,7 +41,7 @@ const HomeWorkOne = () => {
           <p>{date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</p>
         </div>
       </div>
-      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} />
+      <CardBottom title={сomponentState.title}  revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName} />
     </Fragment>
   );
 };
