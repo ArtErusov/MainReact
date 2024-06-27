@@ -39,6 +39,12 @@ const ListOfThings = () => {
   
   //Создал массив с числами от 1 до 10
   const createArray = Array.from({ length: 10 }, (_, i) => i + 1);
+  
+  const numItems = items.length;
+  //число едениц объекта которые соответствуют то-му или иному принципу
+  const numPacked = items.filter((item) => item.packed).length;
+  const percentage = Math.round((numPacked / numItems) * 100);
+
 
   return (
     <Fragment>
@@ -78,6 +84,10 @@ const ListOfThings = () => {
         <div className={styles.bottom}>
           <button className={styles.bottom__sort}>sort by meet order</button>
           <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
+        </div>
+
+        <div className={styles.bottom__text}>
+          <p>{numItems} {numPacked} {percentage}%</p>
         </div>
       </div>
       <CardBottom title={сomponentState.title} important={сomponentState.important}  revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
