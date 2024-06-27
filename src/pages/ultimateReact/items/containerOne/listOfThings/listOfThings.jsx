@@ -17,6 +17,7 @@ const ListOfThings = () => {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [items, setItems] = useState([]);
+  const [sortBy, setSortBy] = useState('input');
 
 
 //Добавление нового элемента массива 
@@ -44,6 +45,11 @@ const ListOfThings = () => {
   //число едениц объекта которые соответствуют то-му или иному принципу
   const numPacked = items.filter((item) => item.packed).length;
   const percentage = Math.round((numPacked / numItems) * 100);
+  // Cортировка
+  let sortedItems;
+  if( sortBy === "input") sortedItems = items;
+  if ( sortBy === "description") sortedItems = items.slice().sort((a, b) => a.description.localeCompare(b.description));
+  if ( sortBy === "packed") sortedItems = items.slice().sort((a, b) => Number(a.packed) - Number(b.packed));
 
 
   return (
@@ -71,7 +77,7 @@ const ListOfThings = () => {
         </form>
  {/* ==================================================================================== */}     
         <div className={styles.main}>
-          {<ui className={styles.main__list}>{items.map((item) => (
+          {<ui className={styles.main__list}>{sortedItems.map((item) => (
             <li className={styles.main__list_item} key={item.id}>
               <input type="checkbox" value={item.packed} onChange={()=> handleToggleItem(item.id)}/>
               <p style={{textDecoration: item.packed ? 'line-through' : ''}}>{item.quantity} {item.description}</p>
@@ -82,7 +88,12 @@ const ListOfThings = () => {
         </div>
 {/* ==================================================================================== */}  
         <div className={styles.bottom}>
-          <button className={styles.bottom__sort}>sort by meet order</button>
+          {/* <button className={styles.bottom__sort}>sort by meet order</button> */}
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value) }>
+            <option value="input">sort by input order</option>
+            <option value="description">sort by description</option>
+            <option value="packed">sort by packed status</option>
+          </select>
           <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
         </div>
 

@@ -93,6 +93,16 @@
     color: var(--white);
   }
 
+  select{
+    height: 54px;
+    padding-left: 20px ;
+    border-radius: 14px;
+    background-color: var(--blue-medium);
+    color: var(--white);
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+
   &__sort {
     margin-right: 20px;
   }
