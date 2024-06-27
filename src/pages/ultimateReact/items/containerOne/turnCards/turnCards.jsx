@@ -1,17 +1,18 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
+import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
-const WorkingWithStates = () => {
+const TurnCards = () => {
   const сomponentState = {
-    title: 'Props + Context',
-    important: 1,
+    title: 'turn over the cards',
+    important: 0,
     revision: 0,
     ready: 0,
     column: 2,
     height: '472px',
     width: '273px'
   };
+  
   return (
     <Fragment>
       <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
@@ -22,5 +23,5 @@ const WorkingWithStates = () => {
   );
 };
 
-export default WorkingWithStates;
+export default TurnCards;
  

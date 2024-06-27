@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
-import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
+import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 //элемент готов
 const PizzaProject = () => {
   // убрать файлы в Json

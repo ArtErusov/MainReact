@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import { Fragment, useState } from 'react';
-import CardBottom from '../../../../components/UI/cardBottom/cardBottom';
+import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const HomeWorkOne = () => {
   const сomponentState = {
