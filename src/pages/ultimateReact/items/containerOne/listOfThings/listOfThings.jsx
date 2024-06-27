@@ -17,11 +17,8 @@ const ListOfThings = () => {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [items, setItems] = useState([]);
-  const [isChecked, setIsChecked] = useState(true);
 
-  const handleCheckboxChange = (event) => {
-  setIsChecked(event.target.checked);
-  };
+
 //Добавление нового элемента массива 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,6 +31,10 @@ const ListOfThings = () => {
 //Удаление элемента массива 
   const handleDelete = (itemId) => {
     setItems(items=>items.filter(item=>item.id !==itemId))
+  }
+//Зачеркивание элемента (изменение в массиве по условию)
+  const handleToggleItem = (id) =>{
+    setItems(items=>items.map((item) => item.id === id ? {...item, packed: !item.packed} : item))
   }
   
   //Создал массив с числами от 1 до 10
@@ -66,8 +67,8 @@ const ListOfThings = () => {
         <div className={styles.main}>
           {<ui className={styles.main__list}>{items.map((item) => (
             <li className={styles.main__list_item} key={item.id}>
-              <input type="checkbox" onChange={handleCheckboxChange} checked={isChecked} />
-              <p style={{textDecoration: isChecked ? 'line-through' : ''}}>{item.quantity} {item.description}</p>
+              <input type="checkbox" value={item.packed} onChange={()=> handleToggleItem(item.id)}/>
+              <p style={{textDecoration: item.packed ? 'line-through' : ''}}>{item.quantity} {item.description}</p>
               <div onClick={() => handleDelete(item.id)}><img src={close} alt=""/></div>
               </li>
             ))}
