@@ -7,20 +7,25 @@ const Header = () => {
   return (
     <Fragment>
       <div className={styles.header}>
-        <ul className={styles.list}>
-          <li onClick={() => setActiveIndex(0)} className={activeIndex == 0 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-            <Link to="http://localhost:5173/yandex">Yandex</Link>
-          </li>
-          <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-            <Link to="http://localhost:5173/ultimatereact">Ultimate React</Link>
-          </li>
-          {/* <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-            <Link to="http://localhost:5173/game">Игры</Link>
-          </li> */}
-          {/* <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-            <Link to="http://localhost:5173">Разное на React</Link>
-          </li> */}
-        </ul>
+        <div className={styles.flex}>
+          <ul className={styles.list}>
+            <li onClick={() => setActiveIndex(0)} className={activeIndex == 0 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/yandex">Yandex</Link>
+            </li>
+            <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/ultimatereact">Ultimate React</Link>
+            </li>
+            {/* <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/game">Игры</Link>
+            </li> */}
+            {/* <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173">Разное на React</Link>
+            </li> */}
+          </ul>
+           <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/important">important </Link>
+            </div>
+        </div>
       </div>
     </Fragment>
   );

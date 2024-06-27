@@ -6,6 +6,8 @@ import UltimateReact from './pages/ultimateReact/ultimateReact';
 import Yandex from './pages/yandex/miniApp';
 import Game from './pages/game/miniApp';
 import InitialStub from './components/initialStub/initialStub';
+import Important from './pages/important/important';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/ultimatereact" element={<UltimateReact />} />
         <Route path="/yandex" element={<Yandex />} />
         <Route path="/game" element={<Game />} />
+        <Route path="/important" element={<Important />} />
       </Routes>
     </Fragment>
   );
