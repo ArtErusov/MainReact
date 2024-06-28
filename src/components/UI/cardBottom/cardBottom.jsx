@@ -9,7 +9,7 @@ const CardBottom = (props) => {
   return (
     <Fragment>
      
-      <div style={{ width: columnSize[props.column - 1], backgroundColor: props.important ? '#FFEBB8' : ''}} className={styles.cardBottom}>
+      <div style={{ width: columnSize[props.column - 1], backgroundColor: props.important === "important" ? '#FFEBB8' : props.important === 'ui' ? '#D8FFD4' : ''}} className={styles.cardBottom}>
         <p onClick={() => setName(!name)}>{name ? props.title : props.componentName}</p>
         <div>
           {props.revision ? <img src={revision} alt="" /> : ''}
