@@ -7,6 +7,7 @@ import Yandex from './pages/yandex/miniApp';
 import Game from './pages/game/miniApp';
 import InitialStub from './components/initialStub/initialStub';
 import Important from './pages/important/important';
+import UI from './pages/UI/UI';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/yandex" element={<Yandex />} />
         <Route path="/game" element={<Game />} />
         <Route path="/important" element={<Important />} />
+        <Route path="/ui" element={<UI />} />
       </Routes>
     </Fragment>
   );

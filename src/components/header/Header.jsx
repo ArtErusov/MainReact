@@ -22,8 +22,13 @@ const Header = () => {
               <Link to="http://localhost:5173">Разное на React</Link>
             </li> */}
           </ul>
-           <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/important">important </Link>
+          <div className={styles.list}>
+            <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                <Link to="http://localhost:5173/ui">UI</Link>
+              </div>
+            <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                <Link to="http://localhost:5173/important">important</Link>
+              </div>
             </div>
         </div>
       </div>
