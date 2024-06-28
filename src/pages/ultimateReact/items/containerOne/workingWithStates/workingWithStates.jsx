@@ -6,7 +6,7 @@ const WorkingWithStates = () => {
   const сomponentState = {
     title: 'Props + Context',
     componentName: 'WorkingWithStates',
-    important: 1,
+    important: "important",
     revision: 0,
     ready: 0,
     column: 2,
@@ -15,7 +15,7 @@ const WorkingWithStates = () => {
   };
   return (
     <Fragment>
-      <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
+      <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important === "important" ? '2px solid #FFEBB8' : сomponentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
     {/* контент */}
       </div>
       <CardBottom important={сomponentState.important} title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
