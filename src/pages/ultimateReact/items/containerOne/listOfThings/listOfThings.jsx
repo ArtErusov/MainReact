@@ -78,7 +78,8 @@ const ListOfThings = () => {
           <button className={styles.header__button}>add</button>
         </form>
  {/* ==================================================================================== */}     
-        <div className={styles.main}>
+        {items.length > 0 
+        ? ( <div className={styles.main}>
           {<ui className={styles.main__list}>{sortedItems.map((item) => (
             <li className={styles.main__list_item} key={item.id}>
               <input type="checkbox" value={item.packed} onChange={()=> handleToggleItem(item.id)}/>
@@ -86,11 +87,14 @@ const ListOfThings = () => {
               <div onClick={() => handleDelete(item.id)}><img src={close} alt=""/></div>
               </li>
             ))}
-            </ui>}
-        </div>
+          </ui>}
+        </div>)
+        : (<div className={styles.filler}>
+            <p>Let`s pack up for our trip</p>
+          </div>)
+        }
 {/* ==================================================================================== */}  
         <div className={styles.bottom}>
-          {/* <button className={styles.bottom__sort}>sort by meet order</button> */}
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value) }>
             <option value="input">sort by input order</option>
             <option value="description">sort by description</option>
@@ -98,10 +102,16 @@ const ListOfThings = () => {
           </select>
           <button onClick={() => setItems([])} className={styles.bottom__clear}>clear list</button>
         </div>
+{/* проблема в css установил падинг, но при большом тексте текст переносился на следующую строчку, сделал условный рендеринг */}
+        {items.length > 0 ? (
+          <div style={{ width: percentage !== 100 ? '640px' : '' }} className={styles.bottom__text}>
+            {percentage === 100 
+            ? "You got everything! Ready to go🚄!!!"
+            : `You have ${numItems} items on your list, and you already packed ${numPacked} (${percentage}%)` }        
+          </div>
+        ) : null}
 
-        <div className={styles.bottom__text}>
-          <p>{numItems} {numPacked} {percentage}%</p>
-        </div>
+        
       </div>
       <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
     </Fragment>
