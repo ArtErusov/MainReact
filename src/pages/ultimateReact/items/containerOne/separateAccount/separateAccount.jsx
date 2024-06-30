@@ -7,14 +7,13 @@ const SeparateAccount = () => {
     title: 'Splitting the bill between friends',
     componentName: 'SeparateAccount',
     important: "pet",
-    // important ui none
     revision: 0,
     ready: 0,
     column: 4,
     height: '472px',
     width: '587px'
   };
-  const borderStyles = сomponentState.important === 'important' ? '2px solid #FFEBB8' : сomponentState.important === 'ui' ? '2px solid #D8FFD4' : '';
+  const borderStyles = сomponentState.important === 'important' ? '2px solid #FFEBB8' : сomponentState.important === 'ui' ? '2px solid #D8FFD4' : сomponentState.important === 'pet' ? '2px solid #ACFFFA' : '';
   return (
     <Fragment>
       <div style={{height:сomponentState.height, width:сomponentState.width, border: borderStyles}} className={styles.mainContainer}>
