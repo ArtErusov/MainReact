@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const WorkingWithStates = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'Props + Context',
     componentName: 'WorkingWithStates',
     important: "important",
@@ -15,10 +15,10 @@ const WorkingWithStates = () => {
   };
   return (
     <Fragment>
-      <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important === "important" ? '2px solid #FFEBB8' : сomponentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
+      <div style={{height:componentState.height, width:componentState.width, border: componentState.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={сomponentState.important} title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };

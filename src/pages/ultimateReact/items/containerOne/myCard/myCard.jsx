@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const MyCard = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'User card',
     revision: 1,
     important: 0,
@@ -40,7 +40,7 @@ const MyCard = () => {
           ))}
         </div>
       </div>
-      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom title={componentState.title} important={componentState.important} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };

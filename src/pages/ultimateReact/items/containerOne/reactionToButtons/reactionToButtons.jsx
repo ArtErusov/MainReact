@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const ReactionToButtons = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'Reaction to buttons',
     revision: 0,
     ready: 1,
@@ -19,7 +19,7 @@ const ReactionToButtons = () => {
   console.log(step);
   return (
     <Fragment>
-      <div style={{ height: сomponentState.height, width: сomponentState.width }} className={styles.mainContainer}>
+      <div style={{ height: componentState.height, width: componentState.width }} className={styles.mainContainer}>
         <button onClick={() => setIsOpen(!isOpen)} className={isOpen ? styles.open : styles.close}>
           {isOpen ? 'close' : 'open'}
         </button>
@@ -48,7 +48,7 @@ const ReactionToButtons = () => {
           </div>
         )}
       </div>
-      <CardBottom title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };

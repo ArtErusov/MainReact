@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const TurnCards = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'turn over the cards',
     componentName: 'TurnCards',
     important: 0,
@@ -16,10 +16,10 @@ const TurnCards = () => {
   
   return (
     <Fragment>
-      <div style={{height:сomponentState.height, width:сomponentState.width, border: сomponentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
+      <div style={{height:componentState.height, width:componentState.width, border: componentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={сomponentState.important} title={сomponentState.title} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };

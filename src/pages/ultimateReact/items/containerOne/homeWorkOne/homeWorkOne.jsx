@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const HomeWorkOne = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'Work home 1',
     revision: 0,
     ready: 0,
@@ -23,7 +23,7 @@ const HomeWorkOne = () => {
 
   return (
     <Fragment>
-      <div style={{ height: сomponentState.height, width: сomponentState.width }} className={styles.mainContainer}>
+      <div style={{ height: componentState.height, width: componentState.width }} className={styles.mainContainer}>
         {/* Задание 1 */}
         <div className={styles.counter}>
           <button onClick={() => setStep(step + counter)}>+</button>
@@ -41,7 +41,7 @@ const HomeWorkOne = () => {
           <p>{date.getDate()} {months[date.getMonth()]} {date.getFullYear()}</p>
         </div>
       </div>
-      <CardBottom title={сomponentState.title}  revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName} />
+      <CardBottom title={componentState.title}  revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName} />
     </Fragment>
   );
 };

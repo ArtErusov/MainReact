@@ -4,7 +4,7 @@ import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import close from '/img/svg/close.svg';
 
 const ListOfThings = () => {
-  const сomponentState = {
+  const componentState = {
     title: 'list of things for trip - Работа с Input',
     revision: 1,
     componentName: 'ListOfThings',
@@ -56,7 +56,7 @@ const ListOfThings = () => {
 
   return (
     <Fragment>
-      <div style={{ height: сomponentState.height, width: сomponentState.width, border: сomponentState.important === "important" ? '2px solid #FFEBB8' : сomponentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
+      <div style={{ height: componentState.height, width: componentState.width, border: componentState.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
 {/* =================================================================================== */}
         <form className={styles.header} onSubmit={handleSubmit}>
           <div className={styles.header__text}>What do you need for your trip?</div>
@@ -113,7 +113,7 @@ const ListOfThings = () => {
 
         
       </div>
-      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom title={componentState.title} important={componentState.important} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };

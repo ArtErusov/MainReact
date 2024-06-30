@@ -4,7 +4,7 @@ import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 //элемент готов
 const PizzaProject = () => {
   // убрать файлы в Json
-  const сomponentState = {
+  const componentState = {
     title: 'React Pizza - simple rendering using map',
     revision: 1,
     important: 0,
@@ -85,7 +85,7 @@ const PizzaProject = () => {
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
-      <CardBottom title={сomponentState.title} important={сomponentState.important} revision={сomponentState.revision} ready={сomponentState.ready} column={сomponentState.column} componentName={сomponentState.componentName}/>
+      <CardBottom title={componentState.title} important={componentState.important} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
     </Fragment>
   );
 };
