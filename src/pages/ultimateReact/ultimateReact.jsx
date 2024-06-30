@@ -10,6 +10,7 @@ import HomeWorkOne from './items/containerOne/homeWorkOne/homeWorkOne';
 import ReactionToButtons from './items/containerOne/reactionToButtons/reactionToButtons';
 import TurnCards from './items/containerOne/turnCards/turnCards';
 import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
+import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
 
 const UltimateReact = () => {
   return (
@@ -18,6 +19,10 @@ const UltimateReact = () => {
       <Divider title="Контейнер 1"/>     
       <div className={styles.grid_one}>   
 {/* ----------------------------Строка 3---------------------------- */} 
+       
+         <div className={styles.grid_one_eight }>
+          <SeparateAccount />
+        </div>
         <div className={styles.grid_one_seven}>
           <WorkingWithStates />
         </div>

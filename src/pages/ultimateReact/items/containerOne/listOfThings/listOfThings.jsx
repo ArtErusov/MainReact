@@ -6,10 +6,10 @@ import close from '/img/svg/close.svg';
 const ListOfThings = () => {
   const сomponentState = {
     title: 'list of things for trip - Работа с Input',
-    revision: 0,
+    revision: 1,
     componentName: 'ListOfThings',
     important: "important",
-    ready: 0,
+    ready: 1,
     column: 6,
     height: '472px',
     width: '900px',
