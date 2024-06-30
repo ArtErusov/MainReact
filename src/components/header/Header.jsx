@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Fragment, useState } from 'react';
 import styles from './styles.module.scss';
+import iIcon from '/img/svg/i.svg';
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState();
+  const [activeHelp, setActiveHelp] = useState(true);
   return (
     <Fragment>
       <div className={styles.header}>
@@ -23,18 +25,25 @@ const Header = () => {
             </li> */}
           </ul>
           <div className={styles.list}>
-          <div onClick={() => setActiveIndex(73)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-                <Link to="http://localhost:5173/pet">pet</Link>
-              </div>
-            <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-                <Link to="http://localhost:5173/ui">UI</Link>
-              </div>
-            <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-                <Link to="http://localhost:5173/important">important</Link>
-              </div>
+            <div onClick={() => setActiveIndex(73)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/pet">pet</Link>
             </div>
+            <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/ui">UI</Link>
+            </div>
+            <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+              <Link to="http://localhost:5173/important">important</Link>
+            </div>
+            <div className={styles.help} onClick={() => setActiveHelp(!activeHelp)}>
+              <img src={iIcon} alt="" />
+            </div>
+          </div>
         </div>
       </div>
+      {activeHelp ?
+      <div className={styles.bottom}></div> : null }
+      
+
     </Fragment>
   );
 };
