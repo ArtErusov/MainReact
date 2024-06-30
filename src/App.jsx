@@ -8,6 +8,7 @@ import Game from './pages/game/miniApp';
 import InitialStub from './components/initialStub/initialStub';
 import Important from './pages/important/important';
 import UI from './pages/UI/UI';
+import Pet from './pages/pet/pet';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/game" element={<Game />} />
         <Route path="/important" element={<Important />} />
         <Route path="/ui" element={<UI />} />
+        <Route path="/pet" element={<Pet />} />
       </Routes>
     </Fragment>
   );

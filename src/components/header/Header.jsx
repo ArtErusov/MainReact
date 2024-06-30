@@ -23,6 +23,9 @@ const Header = () => {
             </li> */}
           </ul>
           <div className={styles.list}>
+          <div onClick={() => setActiveIndex(73)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                <Link to="http://localhost:5173/pet">pet</Link>
+              </div>
             <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
                 <Link to="http://localhost:5173/ui">UI</Link>
               </div>
