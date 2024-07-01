@@ -8,3 +8,16 @@
   }
   
 
+.flex{
+  display: flex;
+}
+.divider{
+  width: 2px;
+  height: 470px;
+}
+
+.left{
+  background-color: var(--blue-light);
+  width: 466px;
+  height: 100px;
+}

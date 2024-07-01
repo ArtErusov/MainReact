@@ -5,7 +5,7 @@ import iIcon from '/img/svg/i.svg';
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState();
-  const [activeHelp, setActiveHelp] = useState(true);
+  const [activeHelp, setActiveHelp] = useState(false);
   return (
     <Fragment>
       <div className={styles.header}>
