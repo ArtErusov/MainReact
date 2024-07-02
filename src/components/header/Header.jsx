@@ -40,10 +40,18 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {activeHelp ?
-      <div className={styles.bottom}></div> : null }
-      
-
+      {activeHelp ? (
+        <div className={styles.bottom}>
+          <div className={styles.bottom__pet}></div>
+          <p>компоненты котолрые делал безуроков</p>
+          <div className={styles.bottom__ui}></div>
+          <p>готовые ui, можно использовать в проектах</p>
+          <div className={styles.bottom__standard}></div>
+          <p>компоненты в которых тренируюсь</p>
+          <div className={styles.bottom__interesting}></div>
+          <p>компоненты для анализа</p>
+        </div>
+      ) : null}
     </Fragment>
   );
 };
