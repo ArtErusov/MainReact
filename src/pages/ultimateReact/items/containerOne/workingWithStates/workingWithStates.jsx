@@ -18,7 +18,7 @@ const WorkingWithStates = () => {
       <div style={{height:componentState.height, width:componentState.width, border: componentState.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
+      <CardBottom componentState={componentState}/>
     </Fragment>
   );
 };

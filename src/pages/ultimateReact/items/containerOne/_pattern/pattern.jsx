@@ -22,7 +22,7 @@ const Pattern = () => {
       <div style={{height:componentState.height, width:componentState.width, border: borderStyles}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
+      <CardBottom componentState={componentState}/>
     </Fragment>
   );
 };

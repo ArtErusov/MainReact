@@ -85,7 +85,7 @@ const PizzaProject = () => {
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
-      <CardBottom title={componentState.title} important={componentState.important} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
+      <CardBottom componentState={componentState}/>
     </Fragment>
   );
 };

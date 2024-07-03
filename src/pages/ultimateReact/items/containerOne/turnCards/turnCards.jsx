@@ -19,7 +19,7 @@ const TurnCards = () => {
       <div style={{height:componentState.height, width:componentState.width, border: componentState.important ? '2px solid #FFEBB8' : ''}} className={styles.mainContainer}>
     {/* контент */}
       </div>
-      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
+      <CardBottom componentState={componentState}/>
     </Fragment>
   );
 };

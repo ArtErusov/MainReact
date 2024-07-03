@@ -40,7 +40,7 @@ const MyCard = () => {
           ))}
         </div>
       </div>
-      <CardBottom title={componentState.title} important={componentState.important} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName}/>
+      <CardBottom componentState={componentState}/>
     </Fragment>
   );
 };

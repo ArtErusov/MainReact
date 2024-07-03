@@ -26,7 +26,7 @@ const SeparateAccount = () => {
           <RightSection />
         </div>
       </div>
-      <CardBottom important={componentState.important} title={componentState.title} revision={componentState.revision} ready={componentState.ready} column={componentState.column} componentName={componentState.componentName} />
+      <CardBottom componentState={componentState} />
     </Fragment>
   );
 };
