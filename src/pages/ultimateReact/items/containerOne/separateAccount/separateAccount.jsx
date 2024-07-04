@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import LeftSection from './leftSection';
 import RightSection from './rightSection';
@@ -17,11 +17,15 @@ const SeparateAccount = () => {
   };
   const backgroundColor = componentState.important === "important" ? '#FFEBB8' : componentState.important === 'ui' ? '#D8FFD4': componentState.important === 'pet' ? '#ACFFFA' : '';
   const borderStyles = componentState.important === 'important' ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
+  
+  const [person, setPerson] = useState([{name: "Pela"},  {name: "Pela 2"}]);
+
+
   return (
     <Fragment>
       <div style={{ height: componentState.height, width: componentState.width, border: borderStyles }} className={styles.mainContainer}>
         <div className={styles.flex}>
-          <LeftSection />
+          <LeftSection person={person}/>
           <div style={{ backgroundColor: backgroundColor}} className={styles.divider}></div>
           <RightSection />
         </div>

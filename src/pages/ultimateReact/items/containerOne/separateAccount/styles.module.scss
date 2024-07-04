@@ -1,23 +1,33 @@
 @import '../../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+}
 
-.flex{
+.flex {
   display: flex;
 }
-.divider{
+.divider {
   width: 2px;
   height: 470px;
 }
 
-.left{
-  background-color: var(--blue-light);
-  width: 466px;
-  height: 100px;
+.left {
+  width: 446px;
+  height: 470px;
+  position: relative;
+
+  &__button {
+    position: absolute;
+    left: 147px;
+    bottom: 10px;
+    padding: 0 27px;
+    background-color: var(--blue-medium);
+    border-radius: 14px;
+    height: 54px;
+    color: var(--white);
+  }
 }
