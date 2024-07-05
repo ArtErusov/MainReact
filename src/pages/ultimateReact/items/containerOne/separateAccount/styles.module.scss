@@ -19,15 +19,74 @@
   width: 446px;
   height: 470px;
   position: relative;
+  &__text {
+    &_name {
+      font-weight: 600;
+      margin-top: 7px;
+    }
+    &_bill{
+      margin-top: 7px;
+      font-size: 16px;
+    }
+  }
+  ul {
+    margin-left: 30px;
+    li {
+      position: relative;
+      width: 390px;
+      margin-top: 20px;
+      display: flex;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+      div {
+        margin-left: 19px;
+      }
+    }
+    button {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 97px;
+      height: 54px;
+      border-radius: 14px;
+      background-color: var(--blue-medium);
+      color: var(--white);
+    }
+  }
 
   &__button {
     position: absolute;
     left: 147px;
+    width: 154px;
     bottom: 10px;
     padding: 0 27px;
     background-color: var(--blue-medium);
     border-radius: 14px;
     height: 54px;
     color: var(--white);
+  }
+
+  &__form {
+    position: absolute;
+    bottom: 80px;
+    margin-left: 50px;
+    z-index: 1;
+    input {
+      width: 349px;
+      height: 54px;
+      border-radius: 14px;
+      border: 2px solid var(--blue-light);
+      padding-left: 10px;
+    }
+    button {
+      margin-top: 20px;
+      width: 349px;
+      height: 54px;
+      border-radius: 14px;
+      background-color: var(--blue-medium);
+      color: var(--white);
+    }
   }
 }
