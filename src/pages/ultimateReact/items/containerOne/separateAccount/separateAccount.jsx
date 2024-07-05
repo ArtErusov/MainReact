@@ -25,7 +25,7 @@ const SeparateAccount = () => {
     <Fragment>
       <div style={{ height: componentState.height, width: componentState.width, border: borderStyles }} className={styles.mainContainer}>
         <div className={styles.flex}>
-          <LeftSection person={person}/>
+          <LeftSection person={person} />
           <div style={{ backgroundColor: backgroundColor}} className={styles.divider}></div>
           <RightSection />
         </div>

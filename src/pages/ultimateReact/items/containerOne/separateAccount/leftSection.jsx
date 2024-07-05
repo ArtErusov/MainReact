@@ -10,6 +10,7 @@ const LeftSection = ({person}) => {
           <p>{item.name}</p>
           </div>
         ))}
+
         <button className={styles.left__button}>add friend</button>
       </div>
     </Fragment>

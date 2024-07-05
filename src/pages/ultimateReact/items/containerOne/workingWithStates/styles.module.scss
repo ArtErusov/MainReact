@@ -1,10 +1,42 @@
 @import '../../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+}
 
+.counter {
+  display: flex;
+  div {
+    width: 63px;
+    height: 54px;
+    text-align: center;
+    border-radius: 14px;
+    background-color: var(--blue-light);
+    padding-top: 17px;
+    margin-top: 20px;
+    p {
+      color: var(--blue-medium);
+    }
+  }
+  button {
+    width: 63px;
+    height: 54px;
+    border-radius: 14px;
+    border: 2px solid var(--blue-medium);
+    color: var(--blue-medium);
+    margin: 20px 21px 0;
+  }
+}
+
+.description{
+  width: 229px;height: 54px;
+  color: var(--blue-medium);
+  text-align: center;
+  border-radius: 14px;
+  background-color: var(--blue-light);
+  padding-top: 17px;
+  margin: 20px 0 0 20px;
+}
