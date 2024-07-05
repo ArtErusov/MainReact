@@ -24,7 +24,7 @@
       font-weight: 600;
       margin-top: 7px;
     }
-    &_bill{
+    &_bill {
       margin-top: 7px;
       font-size: 16px;
     }
@@ -87,6 +87,61 @@
       border-radius: 14px;
       background-color: var(--blue-medium);
       color: var(--white);
+    }
+  }
+}
+
+.right {
+  &__title {
+    padding: 16px 20px;
+    height: 54px;
+    color: var(--white);
+    background-color: var(--blue-medium);
+    border-radius: 14px;
+    margin: 20px 0 0 100px;
+  }
+
+  &__item {
+    margin: 20px 0 0 56px;
+    display: flex;
+    &_text {
+      width: 244px;
+      height: 54px;
+      color: var(--white);
+      background-color: var(--blue-medium);
+      border-radius: 14px;
+      padding: 16px 0 0 20px;
+    }
+    &_input{
+      text-align: center;
+      width: 100px;
+      height: 54px;
+      border: 2px solid var(--blue-medium);
+      margin-left: 20px;
+      border-radius: 14px;
+      color: var(--blue-medium);
+      &::placeholder {
+        color: var(--blue-medium);
+      }
+    }
+
+  }
+
+  &__filling{
+    margin: 20px;
+    width: 409px;
+    height: 432px;
+    background-color: var(--blue-medium);
+    border-radius: 14px;
+    text-align: center;
+    div{
+      margin-top: 170px;
+      p{
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--white);
+      }
     }
   }
 }
