@@ -92,6 +92,7 @@
 }
 
 .right {
+  
   &__title {
     padding: 16px 20px;
     height: 54px;
@@ -124,7 +125,16 @@
         color: var(--blue-medium);
       }
     }
-
+   
+    }
+ button{
+      border-radius: 14px;
+      background-color: var(--blue-medium);
+      height: 54px;
+      padding: 0 20px;
+      color: var(--white);
+      margin-left: 178px;
+      margin-top: 20px;
   }
 
   &__filling{
