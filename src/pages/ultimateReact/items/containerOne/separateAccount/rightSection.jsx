@@ -5,7 +5,6 @@ const RightSection = ({ selectFriend }) => {
   const [billValue, setBillValue] = useState(0);
   const [yourExpense, setYourExpense] = useState(0);
   const [heExpense, setHeExpense] = useState(0);
-  // const [billValue, setBillValue] = useState(0);
 
   const handleSubmit = (event) =>{
     event.preventDefault();
