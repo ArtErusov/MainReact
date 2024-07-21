@@ -1,10 +1,38 @@
 @import '../../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+}
+.cardTurn {
+  text-align: center;
+  &_front {
+    width: 231px;
+    height: 54px;
+    background-color: var(--blue-light);
+    border-radius: 14px;
+    margin-top: 20px;
+    margin-left: 21px;
+    padding-top: 17px;
+    color: var(--blue-medium);
+    cursor: pointer;
 
+    &:hover {
+      color: var(--white);
+      background-color: var(--blue-medium);
+    }
+  }
+  &_active {
+    width: 231px;
+    height: 54px;
+    background-color: var(--blue);
+    border-radius: 14px;
+    margin-top: 20px;
+    margin-left: 21px;
+    padding-top: 17px;
+    color: var(--white);
+    cursor: pointer;
+  }
+}
