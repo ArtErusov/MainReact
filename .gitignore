@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-
+#тест гита
 # git add .
 # git commit -m “ ”
 # git push origin master
