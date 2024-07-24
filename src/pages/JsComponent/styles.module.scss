@@ -1,0 +1,17 @@
+@import '../../assets/css/main.css';
+// контейнер 1
+.grid_one {
+    display: grid;
+    grid-template-columns: repeat(12, 117px);
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+   
+      
+      // строка 1
+      &_one {
+        grid-column: 1 / 4;
+      }
+  }
+  
+  
