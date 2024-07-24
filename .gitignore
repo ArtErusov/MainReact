@@ -12,7 +12,9 @@ dist
 dist-ssr
 *.local
 
-#тест гита
+
+#тест гита 2
+# git pull https://github.com/ArtErusov/MainReact
 # git add .
 # git commit -m “ ”
 # git push origin master
