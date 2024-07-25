@@ -1,10 +1,54 @@
 @import '../../../../../assets/css/main.css';
 
-  .mainContainer {
-    border-top: 2px solid var(--blue-light);
-    border-right: 2px solid var(--blue-light);
-    border-left: 2px solid var(--blue-light);
-    border-radius: 14px 14px 0 0;
-  }
-  
+.mainContainer {
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid var(--blue-light);
+  border-left: 2px solid var(--blue-light);
+  border-radius: 14px 14px 0 0;
+}
 
+.accordion {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: var(--blue-light);
+  width: 229px;
+  height: 57px;
+  border-radius: 0 0 14px 14px;
+  padding-bottom: 20px ;
+  &_stripe {
+    width: 229px;
+    height: 2px;
+    background-color: var(--blue);
+  }
+  &_text {
+    display: flex;
+    justify-content: space-between;
+    &_num {
+      font-weight: 600;
+      margin-top: 17px;
+      margin-left: 27px;
+    }
+    &_title {
+      margin-top: 17px;
+      font-weight: 600;
+    }
+    &_state {
+      margin-top: 10px;
+      font-size: 32px;
+      margin-right: 27px;
+    }
+  }
+}
+.drop{
+  text-align: center;
+  margin-left: 20px;
+
+  p{
+    width: 229px;
+    margin-right: 32px;
+    padding-bottom: 10px;
+    border-radius: 0 0 14px 14px;
+    background-color: var(--blue-light);
+    color: var(--blue-medium);
+  }
+}

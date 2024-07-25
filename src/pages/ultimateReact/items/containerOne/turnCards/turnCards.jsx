@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 
 const TurnCards = () => {
@@ -48,7 +48,7 @@ const TurnCards = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <Fragment>
+    <>
       <div style={{ height: componentState.height, width: componentState.width, border: componentState.important ? '2px solid #FFEBB8' : '' }} className={styles.mainContainer}>
         <div className={styles.cardTurn}>
           {card.map((item) => (
@@ -61,7 +61,7 @@ const TurnCards = () => {
         </div>
       </div>
       <CardBottom componentState={componentState} />
-    </Fragment>
+    </>
   );
 };
 
