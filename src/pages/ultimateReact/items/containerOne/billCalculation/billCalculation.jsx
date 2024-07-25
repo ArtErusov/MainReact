@@ -1,20 +1,11 @@
 import styles from './styles.module.scss';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import { useState } from 'react';
+import data from './data.json';
 
 const BillCalculation = () => {
-  const componentState = {
-    title: 'bill Calculation',
-    componentName: 'BillCalculation',
-    important: 'none',
-    revision: 0,
-    ready: 0,
-    column: 2,
-    height: '472px',
-    width: '273px',
-  };
   //====================styles====================
-  const borderStyles = componentState.important === 'important' ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
   // =============================================
 
   const [test, setTest] = useState(0)
@@ -29,7 +20,7 @@ const BillCalculation = () => {
 
   return (
     <>
-      <div style={{ height: componentState.height, width: componentState.width, border: borderStyles }} className={styles.mainContainer + " " + styles.calc}>
+      <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer + " " + styles.calc}>
         <p>How much was the bill?</p>
         <input onChange={(e) => computation(e.target.value)} type="number" className={styles.calc_input} />
         <p>How did you like the service?</p>
@@ -53,7 +44,7 @@ const BillCalculation = () => {
         <p>{test}</p>
         <p></p>
       </div>
-      <CardBottom componentState={componentState} />
+      <CardBottom componentState={data} />
     </>
   );
 };
