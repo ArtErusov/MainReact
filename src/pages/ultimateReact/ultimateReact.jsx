@@ -6,7 +6,7 @@ import Divider from '../../components/UI/divider/divider';
 import MyCard from './items/containerOne/myCard/myCard';
 import PizzaProject from './items/containerOne/pizzaProject/pizzaProject';
 import ListOfThings from './items/containerOne/listOfThings/listOfThings';
-import HomeWorkOne from './items/containerOne/homeWorkOne/homeWorkOne';
+import HomeWorkCounter from './items/containerOne/homeWorkCounter/homeWorkCounter';
 import ReactionToButtons from './items/containerOne/reactionToButtons/reactionToButtons';
 import TurnCards from './items/containerOne/turnCards/turnCards';
 import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
@@ -37,7 +37,7 @@ const UltimateReact = () => {
           <ReactionToButtons />
         </div>
         <div className={styles.grid_one_three}>
-          <HomeWorkOne />
+          <HomeWorkCounter />
         </div>
         <div className={styles.grid_one_six}>
           <TurnCards />
