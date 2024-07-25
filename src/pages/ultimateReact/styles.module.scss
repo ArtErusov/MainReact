@@ -6,33 +6,36 @@
   gap: 40px;
   margin-top: 40px;
   margin-left: 40px;
- 
-    // строка 3
-    &_eight{
-      grid-column: 5 / 9;
-    }
-    &_seven {
-      grid-column: 11 / 12;
-    }
-    // строка 2
-    &_three {
-      grid-column: 9 / 10;
-    }
-    &_four {
-      grid-column: 7 / 9;
-    }
-    &_five {
-      grid-column: 1 / 5;
-    }
-    &_six {
-      grid-column: 11 / 12;
-    }
-    // строка 1
-    &_one {
-      grid-column: 1 / 9;
-    }
-    &_two {
-      grid-column: 10 / 12;
-    }
-}
 
+  // строка 3
+  &_nine {
+    grid-column: 3 / 5;
+  }
+
+  &_eight {
+    grid-column: 5 / 9;
+  }
+  &_seven {
+    grid-column: 11 / 12;
+  }
+  // строка 2
+  &_three {
+    grid-column: 9 / 10;
+  }
+  &_four {
+    grid-column: 7 / 9;
+  }
+  &_five {
+    grid-column: 1 / 5;
+  }
+  &_six {
+    grid-column: 11 / 12;
+  }
+  // строка 1
+  &_one {
+    grid-column: 1 / 9;
+  }
+  &_two {
+    grid-column: 10 / 12;
+  }
+}

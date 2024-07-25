@@ -11,6 +11,7 @@ import ReactionToButtons from './items/containerOne/reactionToButtons/reactionTo
 import TurnCards from './items/containerOne/turnCards/turnCards';
 import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
 import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
+import Accordion from './items/containerOne/accordion/accordion';
 
 const UltimateReact = () => {
   return (
@@ -19,7 +20,9 @@ const UltimateReact = () => {
       <Divider title="Контейнер 1"/>     
       <div className={styles.grid_one}>   
 {/* ----------------------------Строка 3---------------------------- */} 
-       
+        <div className={styles.grid_one_nine }>
+          <Accordion />
+        </div>
          <div className={styles.grid_one_eight }>
           <SeparateAccount />
         </div>
