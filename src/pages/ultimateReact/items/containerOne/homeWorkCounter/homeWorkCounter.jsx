@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import HomeWorkOne from './homeWorkOne';
+import HomeWorkTwo from './homeWorkTwo';
 
 const HomeWorkCounter = () => {
   const componentState = {
@@ -21,6 +22,8 @@ const HomeWorkCounter = () => {
       <div style={{ height: componentState.height, width: componentState.width }} className={styles.mainContainer}>
         {/* Задание 1 */}
         <HomeWorkOne dayOfTheWeek={dayOfTheWeek} months={months} />
+        {/* Задание 2 */}
+        <HomeWorkTwo dayOfTheWeek={dayOfTheWeek} months={months} />
 
       </div>
       <CardBottom componentState={componentState} />

@@ -32,6 +32,7 @@
   }
   &_date {
     margin-top: 5px;
+    margin-left: 5px;
     width: 259px;
     border-radius: 14px;
     background-color: var(--blue-light);
@@ -40,5 +41,22 @@
     p {
       color: var(--blue-medium);
     }
+  }
+}
+
+.counterTwo {
+  margin-top: 10px;
+  display: flex;
+  margin-left: 5px;
+  input{
+    width: 176px;
+  }
+  p {
+    margin-left: 20px;
+    padding: 22px;
+    width: 64px;
+    background-color: var(--blue-light);
+    color: var(--blue-medium);
+    border-radius: 14px;
   }
 }
