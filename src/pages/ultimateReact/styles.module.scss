@@ -8,6 +8,11 @@
   margin-left: 40px;
 
   // строка 3
+  &_ten {
+    grid-column: 1 / 3;
+  }
+
+
   &_nine {
     grid-column: 3 / 5;
   }
