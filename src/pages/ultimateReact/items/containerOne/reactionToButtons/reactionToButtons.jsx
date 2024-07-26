@@ -1,17 +1,10 @@
 import styles from './styles.module.scss';
 import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
+import data from './data.json';
 
 const ReactionToButtons = () => {
-  const componentState = {
-    title: 'Reaction to buttons',
-    revision: 0,
-    ready: 1,
-    column: 2,
-    componentName: 'ReactionToButtons',
-    height: '472px',
-    width: '273px',
-  };
+ 
 
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
@@ -19,7 +12,7 @@ const ReactionToButtons = () => {
   console.log(step);
   return (
     <Fragment>
-      <div style={{ height: componentState.height, width: componentState.width }} className={styles.mainContainer}>
+      <div style={{ height: data.height, width: data.width }} className={styles.mainContainer}>
         <button onClick={() => setIsOpen(!isOpen)} className={isOpen ? styles.open : styles.close}>
           {isOpen ? 'close' : 'open'}
         </button>
@@ -48,7 +41,7 @@ const ReactionToButtons = () => {
           </div>
         )}
       </div>
-      <CardBottom componentState={componentState}/>
+      <CardBottom componentState={data}/>
     </Fragment>
   );
 };

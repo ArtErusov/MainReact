@@ -1,27 +1,19 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
+import data from './data.json';
 
 const PasswordGenerator = () => {
-  const componentState = {
-    title: 'Password Generator',
-    componentName: 'PasswordGenerator',
-    important: "none",
-    revision: 0,
-    ready: 0,
-    column: 4,
-    height: '472px',
-    width: '587px'
-  };
-  const borderStyles = componentState.important === 'important' ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
-  // const backgroundColor = componentState.important === "important" ? '#FFEBB8' : componentState.important === 'ui' ? '#D8FFD4': componentState.important === 'pet' ? '#ACFFFA' : '';
+
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
+  // const backgroundColor = data.important === "important" ? '#FFEBB8' : data.important === 'ui' ? '#D8FFD4': data.important === 'pet' ? '#ACFFFA' : '';
   return (
     <Fragment>
-      <div style={{height:componentState.height, width:componentState.width, border: borderStyles}} className={styles.mainContainer}>
+      <div style={{height:data.height, width:data.width, border: borderStyles}} className={styles.mainContainer}>
     {/* контент */}
     <p>dasdasdas</p>
       </div>
-      <CardBottom componentState={componentState}/>
+      <CardBottom componentState={data}/>
     </Fragment>
   );
 };

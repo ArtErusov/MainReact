@@ -1,18 +1,10 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
+import data from './data.json';
 
 const MyCard = () => {
-  const componentState = {
-    title: 'User card',
-    revision: 1,
-    important: 0,
-    componentName: 'MyCard',
-    ready: 1,
-    column: 3,
-    height: '472px',
-    width: '900px'
-  };
+
   const userDescription =
     'My name is Artem, I`m 30 years old, and I`m a beginner web developer. I enjoy learning new technologies and putting them into practice. I am passionate about my work and always try to do itin the best possible way. In addition, I am a very responsible person and know how to work in a team.';
   const userSkills = [
@@ -40,7 +32,7 @@ const MyCard = () => {
           ))}
         </div>
       </div>
-      <CardBottom componentState={componentState}/>
+      <CardBottom componentState={data}/>
     </Fragment>
   );
 };

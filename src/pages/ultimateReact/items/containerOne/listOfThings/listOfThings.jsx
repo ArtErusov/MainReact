@@ -2,19 +2,9 @@ import styles from './styles.module.scss';
 import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import close from '/img/svg/close.svg';
+import data from './data.json';
 
 const ListOfThings = () => {
-  const componentState = {
-    title: 'list of things for trip - Работа с Input',
-    revision: 1,
-    componentName: 'ListOfThings',
-    important: "important",
-    ready: 1,
-    column: 6,
-    height: '472px',
-    width: '900px',
-  };
- 
 
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
@@ -56,7 +46,7 @@ const ListOfThings = () => {
 
   return (
     <Fragment>
-      <div style={{ height: componentState.height, width: componentState.width, border: componentState.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
+      <div style={{ height: data.height, width: data.width, border: data.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
 {/* =================================================================================== */}
         <form className={styles.header} onSubmit={handleSubmit}>
           <div className={styles.header__text}>What do you need for your trip?</div>
@@ -113,7 +103,7 @@ const ListOfThings = () => {
 
         
       </div>
-      <CardBottom componentState={componentState}/>
+      <CardBottom componentState={data}/>
     </Fragment>
   );
 };

@@ -1,19 +1,11 @@
 import styles from './styles.module.scss';
 import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
+import data from './data.json';
+
 //элемент готов
 const PizzaProject = () => {
-  // убрать файлы в Json
-  const componentState = {
-    title: 'React Pizza - simple rendering using map',
-    revision: 1,
-    important: 0,
-    componentName: 'PizzaProject',
-    ready: 1,
-    column: 9,
-    height: '472px',
-    width: '900px'
-  };
+ 
   const pizzaData = [
     {
       name: 'Focaccia',
@@ -85,7 +77,7 @@ const PizzaProject = () => {
         <p className={styles.mainContainer__text_lastChild}>{openTime}</p>
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
-      <CardBottom componentState={componentState}/>
+      <CardBottom componentState={data}/>
     </Fragment>
   );
 };

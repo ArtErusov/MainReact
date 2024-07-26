@@ -3,20 +3,12 @@ import { Fragment, useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import LeftSection from './leftSection';
 import RightSection from './rightSection';
+import data from './data.json';
 
 const SeparateAccount = () => {
-  const componentState = {
-    title: 'Splitting the bill between friends',
-    componentName: 'SeparateAccount',
-    important: 'pet',
-    revision: 0,
-    ready: 0,
-    column: 6,
-    height: '472px',
-    width: '900px',
-  };
-  const backgroundColor = componentState.important === "important" ? '#FFEBB8' : componentState.important === 'ui' ? '#D8FFD4': componentState.important === 'pet' ? '#ACFFFA' : '';
-  const borderStyles = componentState.important === 'important' ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
+ 
+  const backgroundColor = data.important === "important" ? '#FFEBB8' : data.important === 'ui' ? '#D8FFD4': data.important === 'pet' ? '#ACFFFA' : '';
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
   
   const [person, setPerson] = useState([{name: "Pela", id: 23321321, avatar: 1, debt: 0}]);
   const [selectFriend, setSelectFriend] = useState(null)
@@ -30,14 +22,14 @@ const SeparateAccount = () => {
   }
   return (
     <Fragment>
-      <div style={{ height: componentState.height, width: componentState.width, border: borderStyles }} className={styles.mainContainer}>
+      <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer}>
         <div className={styles.flex}>
           <LeftSection person={person} handleChange={handleChange} handleFriends={handleFriends}/>
           <div style={{ backgroundColor: backgroundColor}} className={styles.divider}></div>
           <RightSection selectFriend={selectFriend}/>
         </div>
       </div>
-      <CardBottom componentState={componentState} />
+      <CardBottom componentState={data} />
     </Fragment>
   );
 };
