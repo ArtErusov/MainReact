@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import AccordionItem from './accordionItem';
 import data from './data.json';
@@ -16,14 +15,14 @@ const Accordion = () => {
   ];
 
   return (
-    <Fragment>
+    <>
       <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer}>
         { question.map((item) => (
           <AccordionItem key={item.id} question={item.question} answer={item.answer}/>
         ))}
       </div>
       <CardBottom componentState={data} />
-    </Fragment>
+    </>
   );
 };
 

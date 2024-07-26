@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
 
 import Divider from '../../components/UI/divider/divider';
 
@@ -16,7 +15,7 @@ import BillCalculation from './items/containerOne/billCalculation/billCalculatio
 
 const UltimateReact = () => {
   return (
-    <Fragment>
+    <>
 {/* ===========================Контейнер 1========================== */}      
       <Divider title="Контейнер 1"/>     
       <div className={styles.grid_one}>   
@@ -54,7 +53,7 @@ const UltimateReact = () => {
           <MyCard />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

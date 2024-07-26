@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 const RightSection = ({ selectFriend }) => {
   const [billValue, setBillValue] = useState(0);
@@ -14,7 +14,7 @@ const RightSection = ({ selectFriend }) => {
 
   }
   return (
-    <Fragment>
+    <>
       {selectFriend ? (
         <form className={styles.right} onSubmit={handleSubmit}>
           <div className={styles.right__title}>{`Split a bill with ${selectFriend.name}’s`}</div>
@@ -44,7 +44,7 @@ const RightSection = ({ selectFriend }) => {
           </div>
         </div>
       )}
-    </Fragment>
+    </>
   );
 };
 

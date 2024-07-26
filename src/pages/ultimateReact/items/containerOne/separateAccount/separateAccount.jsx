@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import LeftSection from './leftSection';
 import RightSection from './rightSection';
@@ -21,7 +21,7 @@ const SeparateAccount = () => {
     setSelectFriend(friends)
   }
   return (
-    <Fragment>
+    <>
       <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer}>
         <div className={styles.flex}>
           <LeftSection person={person} handleChange={handleChange} handleFriends={handleFriends}/>
@@ -30,7 +30,7 @@ const SeparateAccount = () => {
         </div>
       </div>
       <CardBottom componentState={data} />
-    </Fragment>
+    </>
   );
 };
 

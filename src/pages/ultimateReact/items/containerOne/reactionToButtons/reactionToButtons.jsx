@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import data from './data.json';
 
@@ -11,7 +11,7 @@ const ReactionToButtons = () => {
 
   console.log(step);
   return (
-    <Fragment>
+    <>
       <div style={{ height: data.height, width: data.width }} className={styles.mainContainer}>
         <button onClick={() => setIsOpen(!isOpen)} className={isOpen ? styles.open : styles.close}>
           {isOpen ? 'close' : 'open'}
@@ -42,7 +42,7 @@ const ReactionToButtons = () => {
         )}
       </div>
       <CardBottom componentState={data}/>
-    </Fragment>
+    </>
   );
 };
 

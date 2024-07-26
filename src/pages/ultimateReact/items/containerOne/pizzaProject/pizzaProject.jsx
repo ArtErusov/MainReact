@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import data from './data.json';
 
@@ -12,7 +11,7 @@ const PizzaProject = () => {
   const openTime = `Were open from 12:00 to 22:00. ${checkOpenTime ? 'Come visit us or order online' : 'Sorry we`re closed'} `;
 
   return (
-    <Fragment>
+    <>
       <div className={styles.mainContainer}>
         <h2>fast react pizza co.</h2>
         <p className={styles.mainContainer__text}>Aauthentic Italian cuisine. 6 creative dishes to choose from. All from our stone oven, all organic, all delicious.</p>
@@ -34,7 +33,7 @@ const PizzaProject = () => {
         <button className={checkOpenTime ? styles.mainContainer__but : styles.mainContainer__butGray}>{checkOpenTime ? 'order' : 'We`re sleeping now, come back in the morning =('}</button>
       </div>
       <CardBottom componentState={data}/>
-    </Fragment>
+    </>
   );
 };
 

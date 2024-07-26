@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
 import ListOfThings from '../ultimateReact/items/containerOne/listOfThings/listOfThings';
 import WorkingWithStates from '../ultimateReact/items/containerOne/workingWithStates/workingWithStates'
 
@@ -7,7 +6,7 @@ import WorkingWithStates from '../ultimateReact/items/containerOne/workingWithSt
 
 const Important = () => {
   return (
-    <Fragment>
+    <>
   <div className={styles.grid}> 
     <div className={styles.grid_one}>
       <ListOfThings />
@@ -16,7 +15,7 @@ const Important = () => {
       <WorkingWithStates />
     </div>
   </div>
-    </Fragment>
+    </>
   );
 };
 

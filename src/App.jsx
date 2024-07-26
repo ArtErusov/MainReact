@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import './assets/css/main.css';
 import Header from './components/header/Header';
@@ -14,7 +14,7 @@ import JsComponent from './pages/JsComponent/jsComponent';
 
 function App() {
   return (
-    <Fragment>
+    <>
       <Header />
       <Routes>
         <Route path='' element={<InitialStub/> }/>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/pet" element={<Pet />} />
         <Route path="/js" element={<JsComponent />} />
       </Routes>
-    </Fragment>
+    </>
   );
 }
 

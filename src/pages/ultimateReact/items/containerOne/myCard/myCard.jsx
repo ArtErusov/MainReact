@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import { Fragment } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import data from './data.json';
 
@@ -13,7 +12,7 @@ const MyCard = () => {
     { skill: 'React', color: '#43CAF6', level: "advenced" },
   ];
   return (
-    <Fragment>
+    <>
       <div className={styles.card}>
         <img src="img/myImgFromMyCard.jpg" alt="" />
         <p className={styles.card__title}>Artem Erusov</p>
@@ -33,7 +32,7 @@ const MyCard = () => {
         </div>
       </div>
       <CardBottom componentState={data}/>
-    </Fragment>
+    </>
   );
 };
 

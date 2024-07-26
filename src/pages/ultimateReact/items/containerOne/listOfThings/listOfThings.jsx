@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import close from '/img/svg/close.svg';
 import data from './data.json';
@@ -45,7 +45,7 @@ const ListOfThings = () => {
 
 
   return (
-    <Fragment>
+    <>
       <div style={{ height: data.height, width: data.width, border: data.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
 {/* =================================================================================== */}
         <form className={styles.header} onSubmit={handleSubmit}>
@@ -104,7 +104,7 @@ const ListOfThings = () => {
         
       </div>
       <CardBottom componentState={data}/>
-    </Fragment>
+    </>
   );
 };
 

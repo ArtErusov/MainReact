@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 // import avatar1 from '/img/avatar/avatar-1.png';
 // import avatar2 from '/img/avatar/avatar-2.png';
@@ -22,7 +22,7 @@ const LeftSection = ({ person, handleChange, handleFriends}) => {
   };
 // Сделать рандомный выбор картинки avatar
   return (
-    <Fragment>
+    <>
       <div className={styles.left}>
         <ul>
           {person.map((item) => (
@@ -49,7 +49,7 @@ const LeftSection = ({ person, handleChange, handleFriends}) => {
           {formIsActive ? 'close' : 'add friend'}
         </button>
       </div>
-    </Fragment>
+    </>
   );
 };
 
