@@ -26,13 +26,17 @@
 }
 
 .botton{
-  display: flex;
-  justify-content: space-between;
-
-  &_reset{
-    width: 54px;
-    height: 108px;
+  button{
+    margin-top: 17px;
+    width: 100%;
     background-color: var(--blue-medium);
- 
+    color: var(--white);
+    height: 47px;
+  }
+  p{
+    margin: 15px 0 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    
   }
 }

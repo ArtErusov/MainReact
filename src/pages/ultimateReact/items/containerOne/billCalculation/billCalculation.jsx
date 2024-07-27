@@ -8,21 +8,24 @@ const BillCalculation = () => {
   const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
   // =============================================
 
-  const [test, setTest] = useState(0)
+  const [test, setTest] = useState()
   const [myBill, setMyBill] = useState("0")
   const [FriendBill, setFriendBill] = useState("0")
 
-  const computation= (value) => {
-    const result = Number(value) + (Number(value) * Number(myBill) / 100) + (Number(value) * Number(FriendBill) / 100)
+  const allBill = Number(FriendBill) + Number(myBill)
+  const computation = Math.round(Number(test) + (Number(test) * Number(allBill) / 100))
 
-    setTest(result)
+  const reset = () => {
+    setTest(0);
+    setMyBill(0);
+    setFriendBill(0)
   }
 
   return (
     <>
       <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer + " " + styles.calc}>
         <p>How much was the bill?</p>
-        <input onChange={(e) => computation(e.target.value)} type="number" className={styles.calc_input} />
+        <input onChange={(e) => setTest(e.target.value)} type="number" className={styles.calc_input} value={test}/>
         <p>How did you like the service?</p>
         <select className={styles.calc_input} value={myBill} onChange={(e) => setMyBill(e.target.value) }>
           <option value="0">Dissatisfied (0%)</option>
@@ -38,11 +41,10 @@ const BillCalculation = () => {
           <option value="20">Amazing! (20%)</option>
         </select>
         <div className={styles.botton}>
-          <div className={styles.botton_text}>312312</div>
-          <div className={styles.botton_reset}></div>    
+          <p className={styles.botton_text}>You pay {computation}</p>
+          <p className={styles.botton_reset}>${test} + ${computation - test} tip</p>
+          <button onClick={() => reset()}>reset</button>   
         </div>
-        <p>{test}</p>
-        <p></p>
       </div>
       <CardBottom componentState={data} />
     </>
