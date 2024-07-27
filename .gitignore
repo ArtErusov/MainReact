@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-
+# test
 # git pull https://github.com/ArtErusov/MainReact
 # git add .
 # git commit -m “ ”
