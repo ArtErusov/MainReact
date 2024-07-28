@@ -39,9 +39,13 @@ const TurnCards = () => {
   ];
   const [selectedId, setSelectedId] = useState(null);
 
+  //====================styles====================
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
+  //=============================================
+
   return (
     <>
-      <div style={{ height: data.height, width: data.width, border: data.important ? '2px solid #FFEBB8' : '' }} className={styles.mainContainer}>
+      <div style={{height: data.height, width: data.width, border: borderStyles}} className={styles.mainContainer}>
         <div className={styles.cardTurn}>
           {card.map((item) => (
             <div 
