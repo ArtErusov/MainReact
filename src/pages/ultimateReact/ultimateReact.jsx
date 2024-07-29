@@ -2,6 +2,7 @@ import styles from './styles.module.scss';
 
 import Divider from '../../components/UI/divider/divider';
 
+{/* ===========================Контейнер 1========================== */} 
 import MyCard from './items/containerOne/myCard/myCard';
 import PizzaProject from './items/containerOne/pizzaProject/pizzaProject';
 import ListOfThings from './items/containerOne/listOfThings/listOfThings';
@@ -12,10 +13,21 @@ import WorkingWithStates from './items/containerOne/workingWithStates/workingWit
 import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
 import Accordion from './items/containerOne/accordion/accordion';
 import BillCalculation from './items/containerOne/billCalculation/billCalculation';
+{/* ===========================Контейнер 2========================== */} 
+import Cinema from './items/containerTwo/cinema/cinema';
 
 const UltimateReact = () => {
   return (
     <>
+    {/* ===========================Контейнер 2========================== */}      
+    <Divider title="Контейнер 2"/>     
+      <div className={styles.grid_two}>   
+{/* ----------------------------Строка 1---------------------------- */}
+        <div className={styles.grid_two_one}>
+          <Cinema />
+        </div>
+
+      </div>
 {/* ===========================Контейнер 1========================== */}      
       <Divider title="Контейнер 1"/>     
       <div className={styles.grid_one}>   

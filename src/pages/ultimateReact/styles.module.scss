@@ -1,4 +1,17 @@
 @import '../../assets/css/main.css';
+
+// контейнер 2
+.grid_two {
+  display: grid;
+  grid-template-columns: repeat(12, 117px);
+  gap: 40px;
+  margin: 40px 0 40px 40px;
+   // строка 1
+   &_one {
+    grid-column: 1 / 7 ;
+  }
+}
+
 // контейнер 1
 .grid_one {
   display: grid;
@@ -11,7 +24,6 @@
   &_ten {
     grid-column: 1 / 3;
   }
-
 
   &_nine {
     grid-column: 3 / 5;
