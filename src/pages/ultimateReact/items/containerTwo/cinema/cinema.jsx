@@ -19,6 +19,9 @@ const Cinema = () => {
           <MovieItem key={item.imdbID} item={item} />
         ))}
         </div>
+        {/* тут разделитель */}
+        <div className={styles.mainContainer_div} ></div>
+        {/* конец разделителя */}
       </div>
       <CardBottom componentState={data} />
     </>
