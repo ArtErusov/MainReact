@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import CardBottom from '../../../../../components/UI/cardBottom/cardBottom';
 import data from './data.json';
+import InputText from '../../../../../components/UI/inputText/inputText';
 
 const Cinema = () => {
  //====================styles====================
@@ -10,7 +11,7 @@ const Cinema = () => {
   return (
     <>
       <div style={{height: data.height, width: data.width, border: borderStyles}} className={styles.mainContainer}>
-    {/* контент */}
+    <InputText placeholder={"Movie title..."} width={"500px"}/>
       </div>
       <CardBottom componentState={data}/>
     </>

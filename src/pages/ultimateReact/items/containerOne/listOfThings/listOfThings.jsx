@@ -46,7 +46,7 @@ const ListOfThings = () => {
 
   return (
     <>
-      <div style={{ height: data.height, width: data.width, border: data.important === "important" ? '2px solid #FFEBB8' : componentState.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
+      <div style={{ height: data.height, width: data.width, border: data.important === "important" ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : ""}} className={styles.mainContainer}>
 {/* =================================================================================== */}
         <form className={styles.header} onSubmit={handleSubmit}>
           <div className={styles.header__text}>What do you need for your trip?</div>
