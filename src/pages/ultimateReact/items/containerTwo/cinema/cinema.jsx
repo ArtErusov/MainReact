@@ -13,7 +13,7 @@ const Cinema = () => {
   //=============================================
   return (
     <>
-      <div style={{ borderStyles }} className={styles.mainContainer}>
+      <div style={ {borderStyles} } className={styles.mainContainer}>
         <div className={styles.left}>
         <InputText placeholder={'Movie title...'} width={'409px'} />
         {movieData.map((item) => (
