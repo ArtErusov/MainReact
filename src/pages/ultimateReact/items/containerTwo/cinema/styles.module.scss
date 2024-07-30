@@ -2,11 +2,6 @@
 
 .mainContainer{
     display: flex;
-    &_div{
-        height: 100%;
-        width: 2px;
-        background-color: rgb(187, 187, 187);
-    }
 }
 .left{
     margin: 20px 20px 0 20px;
