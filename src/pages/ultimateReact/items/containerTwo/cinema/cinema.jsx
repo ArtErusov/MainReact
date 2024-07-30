@@ -12,13 +12,17 @@ const Cinema = () => {
   const borderStyles = { height: data.height, width: data.width, border: data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '' };
   //=============================================
 
-  const [isOpen, setIsOpen] = useState('true')
+  const [isOpen, setIsOpen] = useState('true');
+  const [query, setQuery] = useState();
+  const handleChange = (value) => setQuery(value);
+
+
   return (
     <>
       <div style={{ borderStyles }} className={styles.mainContainer}>
         <div className={styles.left}>
 
-          <InputText placeholder={'Movie title...'} width={'409px'} />
+          <InputText placeholder={'Movie title...'} width={'409px'} value={query} getValue={handleChange}/>
           {isOpen ?
             <div>
               {movieData.map((item) => (
