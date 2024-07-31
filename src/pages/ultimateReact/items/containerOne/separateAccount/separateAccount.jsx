@@ -8,7 +8,7 @@ import VerticalDivider from '../../../../../components/UI/verticalDivider/vertic
 
 const SeparateAccount = () => {
 
-  const borderStyles = { height: data.height, width: data.width, border: data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : ''};
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : data.important === 'pet' ? '2px solid #ACFFFA' : '';
   
   const [person, setPerson] = useState([{name: "Pela", id: 23321321, avatar: 1, debt: 0}]);
   const [selectFriend, setSelectFriend] = useState(null)
@@ -22,7 +22,7 @@ const SeparateAccount = () => {
   }
   return (
     <>
-      <div style={{borderStyles}} className={styles.mainContainer}>
+      <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer}>
         <div className={styles.flex}>
           <LeftSection person={person} handleChange={handleChange} handleFriends={handleFriends}/>
           <VerticalDivider data={data}/>
