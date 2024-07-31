@@ -22,7 +22,7 @@ const SeparateAccount = () => {
   }
   return (
     <>
-      <div style={{ borderStyles }} className={styles.mainContainer}>
+      <div style={{borderStyles}} className={styles.mainContainer}>
         <div className={styles.flex}>
           <LeftSection person={person} handleChange={handleChange} handleFriends={handleFriends}/>
           <VerticalDivider data={data}/>

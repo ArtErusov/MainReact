@@ -5,7 +5,7 @@ import data from './data.json';
 
 const Accordion = () => {
 
-  const borderStyles =data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
+  const borderStyles = data.important === 'important' ? '2px solid #FFEBB8' : data.important === 'ui' ? '2px solid #D8FFD4' : componentState.important === 'pet' ? '2px solid #ACFFFA' : '';
 
   const question = [
     { question: 'Where ?', answer: 'here', id: 2134 },
@@ -17,8 +17,8 @@ const Accordion = () => {
   return (
     <>
       <div style={{ height: data.height, width: data.width, border: borderStyles }} className={styles.mainContainer}>
-        { question.map((item) => (
-          <AccordionItem key={item.id} question={item.question} answer={item.answer}/>
+        { question.map((item, index) => (
+          <AccordionItem key={item.id} question={item.question} answer={item.answer} index={index}/>
         ))}
       </div>
       <CardBottom componentState={data} />
