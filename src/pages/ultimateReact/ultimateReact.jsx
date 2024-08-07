@@ -3,8 +3,6 @@ import styles from './styles.module.scss';
 import Divider from '../../components/UI/divider/divider';
 
 {/* ===========================Контейнер 1========================== */} 
-import MyCard from './items/containerOne/myCard/myCard';
-import PizzaProject from './items/containerOne/pizzaProject/pizzaProject';
 import ListOfThings from './items/containerOne/listOfThings/listOfThings';
 import HomeWorkCounter from './items/containerOne/homeWorkCounter/homeWorkCounter';
 import ReactionToButtons from './items/containerOne/reactionToButtons/reactionToButtons';
@@ -31,7 +29,7 @@ const UltimateReact = () => {
 {/* ===========================Контейнер 1========================== */}      
       <Divider title="Контейнер 1"/>     
       <div className={styles.grid_one}>   
-{/* ----------------------------Строка 3---------------------------- */} 
+{/* ----------------------------Строка 2---------------------------- */} 
         <div className={styles.grid_one_ten }>
           <BillCalculation />
         </div>
@@ -44,7 +42,7 @@ const UltimateReact = () => {
         <div className={styles.grid_one_seven}>
           <WorkingWithStates />
         </div>
-{/* ----------------------------Строка 2---------------------------- */} 
+{/* ----------------------------Строка 1---------------------------- */} 
         <div className={styles.grid_one_five}>
           <ListOfThings />
         </div>
@@ -57,13 +55,6 @@ const UltimateReact = () => {
         <div className={styles.grid_one_six}>
           <TurnCards />
         </div >
-{/* ----------------------------Строка 1---------------------------- */}
-        <div className={styles.grid_one_one}>
-          <PizzaProject />
-        </div>
-        <div className={styles.grid_one_two}>
-          <MyCard />
-        </div>
       </div>
     </>
   );
