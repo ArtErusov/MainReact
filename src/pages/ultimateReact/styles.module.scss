@@ -17,8 +17,7 @@
   display: grid;
   grid-template-columns: repeat(12, 117px);
   gap: 40px;
-  margin-top: 40px;
-  margin-left: 40px;
+  margin: 40px 0 40px 40px;
 
   // строка 2
   &_ten {
@@ -39,9 +38,7 @@
   &_three {
     grid-column: 9 / 10;
   }
-  &_four {
-    grid-column: 7 / 9;
-  }
+
   &_five {
     grid-column: 1 / 5;
   }
