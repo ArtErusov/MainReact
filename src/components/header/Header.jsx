@@ -11,30 +11,43 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.flex}>
           <ul className={styles.list}>
-            <li onClick={() => setActiveIndex(0)} className={activeIndex == 0 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/yandex">Yandex</Link>
-            </li>
-            <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/ur">Ultimate React</Link>
-            </li>
-            {/* <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/game">Игры</Link>
-            </li> */}
-            {/* <li onClick={() => setActiveIndex(3)} className={activeIndex == 3 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173">Разное на React</Link>
-            </li> */}
-            <li onClick={() => setActiveIndex(4)} className={activeIndex == 4 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/js">converted from JS</Link>
-            </li>
-
+            {/* <Link to="http://localhost:5173/yandex">
+              <li onClick={() => setActiveIndex(0)} className={activeIndex == 0 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                Yandex
+              </li>
+            </Link> */}
+            <Link to="http://localhost:5173/ur">
+              <li onClick={() => setActiveIndex(1)} className={activeIndex == 1 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                Working with react
+              </li>
+            </Link>
+            {/* <Link to="http://localhost:5173/game">
+              <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                Игры
+              </li>
+            </Link> */}
+            <Link to="http://localhost:5173/js">
+              <li onClick={() => setActiveIndex(4)} className={activeIndex == 4 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                Converted from JS
+              </li>
+            </Link>
           </ul>
           <div className={styles.list}>
-            <div onClick={() => setActiveIndex(73)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/pet">pet</Link>
-            </div>
-            <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-              <Link to="http://localhost:5173/ui">UI</Link>
-            </div>
+            <Link to="http://localhost:5173/pet">
+              <div onClick={() => setActiveIndex(71)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                Pet
+              </div>
+            </Link>
+            <Link to="http://localhost:5173/ui">
+              <div onClick={() => setActiveIndex(72)} className={activeIndex == 72 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                UI
+              </div>
+            </Link>
+            <Link to="http://localhost:5173/pet">
+              <div onClick={() => setActiveIndex(73)} className={activeIndex == 73 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
+                pet
+              </div>
+            </Link>
             <div className={styles.help} onClick={() => setActiveHelp(!activeHelp)}>
               <img src={iIcon} alt="" />
             </div>
