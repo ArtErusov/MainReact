@@ -20,11 +20,6 @@ const Header = () => {
               Working with react
             </li>
           </Link>
-          {/* <Link to="http://localhost:5173/game">
-              <li onClick={() => setActiveIndex(2)} className={activeIndex == 2 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
-                Игры
-              </li>
-            </Link> */}
           <Link to="http://localhost:5173/js">
             <li onClick={() => setActiveIndex(4)} className={activeIndex == 4 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
               Converted from JS
@@ -32,7 +27,7 @@ const Header = () => {
           </Link>
         </ul>
         <div className={styles.list}>
-          <Link to="http://localhost:5173/pet">
+          <Link to="http://localhost:5173/technical">
             <div onClick={() => setActiveIndex(71)} className={activeIndex == 71 ? styles.list__item + ' ' + styles.list__item_active : styles.list__item}>
               Technical
             </div>
