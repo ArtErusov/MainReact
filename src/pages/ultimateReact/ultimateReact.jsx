@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-
 import Divider from '../../components/UI/divider/divider';
 
 {/* ===========================Контейнер 1========================== */} 

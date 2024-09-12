@@ -1,11 +1,13 @@
 import styles from './styles.module.scss';
 
-const Divider = (props) => {
+const Divider = ({title, color}) => {
+  const backgroundColor = color === "UI" ? "#D8FFD4" : "#f3f6fd" 
+
   return (
     <>
-      <div className={styles.stripe}></div>
-      <p className={styles.stripe__title}>{props.title}</p>
-      <div className={styles.stripe__bottom}></div>
+      <div style={{ backgroundColor: backgroundColor}} className={styles.stripe}></div>
+      <p className={styles.stripe__title}>{title}</p>
+      <div style={{ backgroundColor: backgroundColor}} className={styles.stripe__bottom}></div>
     </>
   );
 };
