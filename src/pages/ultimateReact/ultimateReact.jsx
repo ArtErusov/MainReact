@@ -4,7 +4,6 @@ import Divider from '../../components/UI/divider/divider';
 {/* ===========================Контейнер 1========================== */} 
 import ListOfThings from './items/containerOne/listOfThings/listOfThings';
 import HomeWorkCounter from './items/containerOne/homeWorkCounter/homeWorkCounter';
-import TurnCards from './items/containerOne/turnCards/turnCards';
 import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
 import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
 import Accordion from './items/containerOne/accordion/accordion';
@@ -48,9 +47,6 @@ const UltimateReact = () => {
         <div className={styles.grid_one_three}>
           <HomeWorkCounter />
         </div>
-        <div className={styles.grid_one_six}>
-          <TurnCards />
-        </div >
       </div>
     </>
   );
