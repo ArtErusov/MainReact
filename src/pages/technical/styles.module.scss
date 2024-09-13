@@ -1,1 +1,12 @@
 @import '../../assets/css/main.css';
+.grid_one {
+  display: grid;
+  grid-template-columns: repeat(12, 117px);
+  gap: 40px;
+  margin: 40px 0 40px 40px;
+
+  // строка 1
+  &_one {
+    grid-column: 1 / 3;
+  }
+}

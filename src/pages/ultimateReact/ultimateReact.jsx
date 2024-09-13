@@ -4,7 +4,6 @@ import Divider from '../../components/UI/divider/divider';
 {/* ===========================Сontainer 1========================== */} 
 import ListOfThings from './items/containerOne/listOfThings/listOfThings';
 import HomeWorkCounter from './items/containerOne/homeWorkCounter/homeWorkCounter';
-import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
 import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
 import BillCalculation from './items/containerOne/billCalculation/billCalculation';
 {/* ===========================Сontainer 2========================== */} 
@@ -41,9 +40,7 @@ const UltimateReact = () => {
         <div className={styles.grid_one_four}>
           <HomeWorkCounter />
         </div>
-        <div className={styles.grid_one_seven}>
-          <WorkingWithStates />
-        </div>
+
       </div>
     </>
   );
