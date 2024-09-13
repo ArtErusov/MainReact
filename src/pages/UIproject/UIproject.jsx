@@ -13,10 +13,10 @@ const UIproject = () => {
           <Accordion />
         </div>
       </div>
-      <Divider title={'Animating'} color={'UI'} />
+      <Divider title={'Animating'} color={'UI'} margin={true}/>
 {/* =========================Animating================================ */}      
       <div className={styles.grid_anim}></div>
-      <Divider title={'Elements without logic'} color={'UI'} />
+      <Divider title={'Elements without logic'} color={'UI'} margin={true}/>
 {/* ==================Elements without logic========================== */}    
       <div className={styles.grid_notLog}></div>
     </>
