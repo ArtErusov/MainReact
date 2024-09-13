@@ -8,9 +8,7 @@ const CounterContext = () => {
     <>
       <div className={styles.counter}>
         <button onClick={() => setCounterContext(counterContext + 1)}>+</button>
-        <div >
-          <p>{counterContext}</p>
-        </div>
+        <div><p>{counterContext}</p></div>
         <button onClick={() => setCounterContext(counterContext - 1)}>--</button>
       </div>
       <p className={styles.description}>Работа с Context</p>
