@@ -3,8 +3,8 @@ import styles from './styles.module.scss';
 const AccordionItem = ({answer, question, index}) => {
     const [ isOpen, setIsOpen ] = useState(false) 
 //====================styles====================
-    const color = isOpen ? "#5051f9": "#BDBDFF";
-    const colorStripe = isOpen ? "#5051f9": "#f3f6fd";
+    const color = isOpen ? "#5051f9" : "#BDBDFF";
+    const colorStripe = isOpen ? "#5051f9" : "#f3f6fd";
     const border = isOpen ? "0px" : "0 0 14px 14px";
 // =============================================
   return (
@@ -19,11 +19,10 @@ const AccordionItem = ({answer, question, index}) => {
         </div>
         
       </div>
-      { isOpen ? 
+      { isOpen && 
         <div onClick={() => setIsOpen(false)}  className={styles.drop} >
             <p>{answer}</p>
-        </div> 
-        : null}
+        </div> }
     </>
   );
 };

@@ -7,6 +7,9 @@
     gap: 40px;
     margin-top: 40px;
     margin-left: 40px;
+    &_one {
+        grid-column: 1 / 3;
+      }
   }
   &_anim{
     display: grid;

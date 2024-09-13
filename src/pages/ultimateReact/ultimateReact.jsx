@@ -6,7 +6,6 @@ import ListOfThings from './items/containerOne/listOfThings/listOfThings';
 import HomeWorkCounter from './items/containerOne/homeWorkCounter/homeWorkCounter';
 import WorkingWithStates from './items/containerOne/workingWithStates/workingWithStates';
 import SeparateAccount from './items/containerOne/separateAccount/separateAccount';
-import Accordion from './items/containerOne/accordion/accordion';
 import BillCalculation from './items/containerOne/billCalculation/billCalculation';
 {/* ===========================Контейнер 2========================== */} 
 import Cinema from './items/containerTwo/cinema/cinema';
@@ -29,9 +28,6 @@ const UltimateReact = () => {
 {/* ----------------------------Строка 2---------------------------- */} 
         <div className={styles.grid_one_ten }>
           <BillCalculation />
-        </div>
-        <div className={styles.grid_one_nine }>
-          <Accordion />
         </div>
          <div className={styles.grid_one_eight }>
           <SeparateAccount />

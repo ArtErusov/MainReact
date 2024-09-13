@@ -1,14 +1,23 @@
 import Divider from '../../components/UI/divider/divider';
-import styles from './styles.module.scss';
 
+import styles from './styles.module.scss';
+{/* ======================Elements with JS============================= */}
+import Accordion from './items/withJS/accordion/accordion';
 const UIproject = () => {
   return (
     <>
       <Divider title={'Elements with JS'} color={'UI'} />
-      <div className={styles.grid_JS}></div>
-      <Divider title={'animating'} color={'UI'} />
+{/* ======================Elements with JS============================= */}
+      <div className={styles.grid_JS}>
+        <div className={styles.grid_JS_one}>
+          <Accordion />
+        </div>
+      </div>
+      <Divider title={'Animating'} color={'UI'} />
+{/* =========================Animating================================ */}      
       <div className={styles.grid_anim}></div>
-      <Divider title={'elements without logic'} color={'UI'} />
+      <Divider title={'Elements without logic'} color={'UI'} />
+{/* ==================Elements without logic========================== */}    
       <div className={styles.grid_notLog}></div>
     </>
   );
