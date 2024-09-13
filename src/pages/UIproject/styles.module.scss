@@ -1,11 +1,29 @@
 @import '../../assets/css/main.css';
 
 .grid {
+  &_JS{
     display: grid;
     grid-template-columns: repeat(12, 117px);
     gap: 40px;
     margin-top: 40px;
     margin-left: 40px;
+  }
+  &_anim{
+    display: grid;
+    grid-template-columns: repeat(12, 117px);
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+  &_notLog{
+    display: grid;
+    grid-template-columns: repeat(12, 117px);
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    
+  }
+    
    
       // &_one {
       //   grid-column: 1 / 7;
